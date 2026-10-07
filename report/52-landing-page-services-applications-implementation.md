@@ -17,7 +17,7 @@ En el Sprint Planning 1 el equipo definió el objetivo del Sprint y seleccionó 
 | Time | 10:00 AM |
 | Location | Reunión virtual vía Microsoft Teams |
 | Prepared By | Peñaranda Caldas, Gabriel Augusto |
-| Attendees (to planning meeting) | Checalla Apaza, Emanuel Renato / Lozano Quispe, Fabricio Jofred / Medina Merma, Ingrid Melani / Peñaranda Caldas, Gabriel Augusto / Vite Celis, Rodrigo Matias |
+| Attendees (to planning meeting) | Checalla Apaza, Emanuel Renato / Lozano Quispe, Fabricio Jofred / Pezo Castilla, Maria Jose / Peñaranda Caldas, Gabriel Augusto / Vite Celis, Rodrigo Matias |
 | Sprint 0 Review Summary | N/A. Es el primer Sprint del proyecto. |
 | Sprint 0 Retrospective Summary | N/A. Es el primer Sprint del proyecto. |
 | **Sprint Goal & User Stories** | |
@@ -33,7 +33,7 @@ Los aspectos del Sprint 1 son la implementación del Landing Page, el diseño de
 | :--- | :--- | :---: | :---: | :---: |
 | Checalla Apaza, Emanuel Renato | Emanuelca135 | C | C | L |
 | Lozano Quispe, Fabricio Jofred | FabricioZz15 | C | L | C |
-| Medina Merma, Ingrid Melani | Grini913 | C | C | C |
+| Pezo Castilla, Maria Jose | MariaJosePezo | C | L | C |
 | Peñaranda Caldas, Gabriel Augusto | gapc2124 | L | C | C |
 | Vite Celis, Rodrigo Matias | rodriznnn | C | C | C |
  
@@ -48,7 +48,7 @@ El objetivo del Sprint 1 fue publicar la primera versión del Landing Page. Las 
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **User Story** | | **Work-Item / Task** | | | | | |
 | **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
-| US04 | Landing Page: Propuesta para Transportistas | T01 | Estructura base del repositorio | Crear el repositorio `Trazza-LandingPage` y la estructura inicial del sitio. | 4 | Medina Merma, Ingrid Melani | Done |
+| US04 | Landing Page: Propuesta para Transportistas | T01 | Estructura base del repositorio | Crear el repositorio `Trazza-LandingPage` y la estructura inicial del sitio. | 4 | Pezo Castilla, Maria Jose | Done |
 | US04 | Landing Page: Propuesta para Transportistas | T02 | Header, navegación y Hero | Implementar la barra de navegación responsive y la sección Hero con los botones por rol. | 6 | Peñaranda Caldas, Gabriel Augusto | Done |
 | US04 | Landing Page: Propuesta para Transportistas | T03 | Sección para transportistas | Maquetar los beneficios para el transportista y el llamado a registrarse. | 4 | Peñaranda Caldas, Gabriel Augusto | Done |
 | US05 | Landing Page: Propuesta para Emprendedores | T04 | Sección para comerciantes y comparativa | Maquetar los beneficios para el comerciante MYPE y la comparativa frente al flete tradicional. | 5 | Peñaranda Caldas, Gabriel Augusto | Done |
@@ -98,7 +98,7 @@ En el Sprint 1 se creó la aplicación en AWS Amplify Hosting y se conectó con 
 </div>
 #### 5.2.1.8. Team Collaboration Insights during Sprint
  
-En el Sprint 1 el equipo trabajó en dos repositorios. En `Trazza-LandingPage` se registraron 2 commits: Medina Merma, Ingrid Melani (estructura inicial) y Peñaranda Caldas, Gabriel Augusto (primera versión completa), ambos directamente en `main`. En `Trazza-report` cada sección del informe se trabajó en su rama `feature/*` y se integró a `develop` mediante Pull Requests, con commits de los cinco integrantes.
+En el Sprint 1 el equipo trabajó en dos repositorios. En `Trazza-LandingPage` se registraron 2 commits: Pezo Castilla, Maria Jose (estructura inicial) y Peñaranda Caldas, Gabriel Augusto (primera versión completa), ambos directamente en `main`. En `Trazza-report` cada sección del informe se trabajó en su rama `feature/*` y se integró a `develop` mediante Pull Requests, con commits de los cinco integrantes.
  
 Los gráficos de Contributors muestran las contribuciones semanales de cada integrante. Las barras de las semanas del 7 y 14 de septiembre corresponden al Sprint 1.
  
@@ -127,7 +127,7 @@ En el Sprint Planning 2 el equipo definió el objetivo del Sprint y seleccionó 
 | Time | 10:00 p.m |
 | Location | Modalidad Remota a través de la plataforma Discord |
 | Prepared By |  Peñaranda Caldas, Gabriel Augusto |
-| Attendees (to planning meeting) | Checalla Apaza, Emanuel Renato / Lozano Quispe, Fabricio Jofred / Medina Merma, Ingrid Melani / Peñaranda Caldas, Gabriel Augusto / Vite Celis, Rodrigo Matias |
+| Attendees (to planning meeting) | Checalla Apaza, Emanuel Renato / Lozano Quispe, Fabricio Jofred / Pezo Castilla, Maria Jose / Peñaranda Caldas, Gabriel Augusto / Vite Celis, Rodrigo Matias |
 | Sprint 1 Review Summary | En este sprint, el equipo avanzó en la primera versión funcional de Trazza, desarrollando la Landing Page y las funcionalidades iniciales de registro y autenticación. También se establecieron las bases para la integración y despliegue de los componentes del sistema. Como mejora, identificamos la necesidad de seguir refinando la experiencia de usuario y fortalecer la integración entre los diferentes módulos. |
 | Sprint 1 Retrospective Summary | Durante este sprint, el equipo mantuvo una colaboración constante mediante la distribución de responsabilidades y el uso de GitHub para integrar los avances. Sin embargo, se identificaron oportunidades de mejora en la coordinación de tareas, comunicación e integración de cambios entre ramas. Para el siguiente sprint, buscaremos mejorar la organización del trabajo y mantener una comunicación más constante entre los integrantes. |
 | **Sprint Goal & User Stories** | |
@@ -143,7 +143,7 @@ En esta sección se presentan los líderes y colaboradores responsables de los p
 | :--- | :--- | :---: | :---: | :---: |
 | Checalla Apaza, Emanuel Renato | Emanuelca135 | C | C | C |
 | Lozano Quispe, Fabricio Jofred | FabricioZz15 | C | L | C |
-| Medina Merma, Ingrid Melani | Grini913 | L | C | C |
+| Pezo Castilla, Maria Jose | MariaJosePezo | L | C | C |
 | Peñaranda Caldas, Gabriel Augusto | gapc2124 | C | C | C |
 | Vite Celis, Rodrigo Matias | rodriznnn | C | C | C |
 
@@ -157,13 +157,13 @@ En esta sección se detallan las User Stories y las tareas seleccionadas para el
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **User Story** | | **Work-Item / Task** | | | | | |
 | **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
-| US01 | Registro de Transportista | T07 | UI Formulario de Registro Transportista | Implementar la vista del formulario de registro y validaciones para el transportista. | 6 | Medina Merma, Ingrid Melani | Done |
+| US01 | Registro de Transportista | T07 | UI Formulario de Registro Transportista | Implementar la vista del formulario de registro y validaciones para el transportista. | 6 | Pezo Castilla, Maria Jose | Done |
 | US02 | Registro de Emprendedor | T08 | UI Formulario de Registro Emprendedor | Implementar la vista del formulario de registro y validaciones para el emprendedor. | 6 | Checalla Apaza, Emanuel Renato | Done |
 | US03 | Inicio de Sesión de Usuario | T09 | Pantalla de Login (Web App) | Desarrollar la vista de inicio de sesión con enrutamiento hacia el dashboard respectivo. | 5 | Peñaranda Caldas, Gabriel Augusto | Done |
 | US08 | Publicación de Ruta de Retorno | T10 | Vista Dashboard Transportista | Diseñar la interfaz principal del transportista con el botón y modal para publicar rutas. | 8 | Lozano Quispe, Fabricio Jofred | Done |
 | US09 | Solicitud de Envío de Mercadería | T11 | Vista Dashboard Emprendedor | Diseñar la interfaz principal del emprendedor para solicitar un envío (formulario de carga). | 8 | Vite Celis, Rodrigo Matias | Done |
 | — | Constraint: Configuración | T12 | Estructura Base Web App | Configurar el repositorio del Frontend (Angular/React), routing base y dependencias de diseño. | 4 | Peñaranda Caldas, Gabriel Augusto | Done |
-| — | Constraint: Despliegue | T13 | Despliegue Frontend en Cloud | Desplegar la aplicación web funcional conectada a un entorno de prueba público. | 4 | Medina Merma, Ingrid Melani | Done |
+| — | Constraint: Despliegue | T13 | Despliegue Frontend en Cloud | Desplegar la aplicación web funcional conectada a un entorno de prueba público. | 4 | Pezo Castilla, Maria Jose | Done |
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
@@ -233,7 +233,7 @@ En esta sección se presentan las evidencias de colaboración del equipo durante
 | :--- | :--- | :--- | :---: | :---: | :--- |
 | Checalla Apaza, Emanuel Renato | Emanuelca135 | Trazza-WebApplication / Trazza-report | 8 | 2 | Desarrollo del registro de Emprendedor y documentación. |
 | Lozano Quispe, Fabricio Jofred | FabricioZz15 | Trazza-WebApplication / Trazza-report | 7 | 2 | Interfaz del Dashboard de Transportista y diseño UI. |
-| Medina Merma, Ingrid Melani | Grini913 | Trazza-WebApplication / Trazza-report | 10 | 3 | Despliegue, estructura base, y Registro de Transportista. |
+| Pezo Castilla, Maria Jose | Grini913 | Trazza-WebApplication / Trazza-report | 10 | 3 | Despliegue, estructura base, y Registro de Transportista. |
 | Peñaranda Caldas, Gabriel Augusto | gapc2124 | Trazza-WebApplication / Trazza-report | 12 | 3 | Login, ruteo de la aplicación, y resolución de conflictos. |
 | Vite Celis, Rodrigo Matias | rodriznnn | Trazza-WebApplication / Trazza-report | 7 | 2 | Interfaz del Dashboard de Emprendedor (solicitud de carga). |
 
