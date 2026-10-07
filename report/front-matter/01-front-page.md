@@ -6,7 +6,7 @@ Universidad Peruana de Ciencias Aplicadas
 Carrera de Ingeniería de Software
 
 **1ASI0729**  
-**Desarrollo de Aplicaciones Web**
+**Desarrollo de Aplicaciones Open Source**
 
 NRC  
 **16692**
@@ -17,7 +17,7 @@ Docente
 **Velásquez Núñez, Ángel Augusto**
 
 Equipo  
-**StackRoot**
+**NexusLibre**
 
 Proyecto  
 **Trazza**
@@ -55,6 +55,6 @@ Proyecto
 
 **Período 202620**
 
-**Septiembre 2026**
+**Octubre 2026**
 
 </div>
