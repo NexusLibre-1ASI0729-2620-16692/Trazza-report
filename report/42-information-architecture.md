@@ -56,7 +56,7 @@ En esta sección se definen los **SEO Tags** y **Meta Tags** que serán implemen
 | **Title** | Trazza \| Conecta tus Retornos Vacíos con Carga Real en Lima |
 | **Meta Description** | Plataforma logística que conecta transportistas con capacidad ociosa y emprendedores que necesitan enviar carga en Lima, mediante un motor de emparejamiento con IA, sin comisiones por transacción. |
 | **Meta Keywords** | fletes vacíos Lima, transporte de carga terrestre, matchmaking logístico, optimización de rutas, transportistas independientes, envíos para pymes, trazabilidad GPS |
-| **Author** | Equipo StackRoot - UPC Ingeniería de Software |
+| **Author** | Equipo NexusLibre - UPC Ingeniería de Software |
 
 #### Web Application
 | Elemento | Valor |
@@ -64,7 +64,7 @@ En esta sección se definen los **SEO Tags** y **Meta Tags** que serán implemen
 | **Title** | Panel de Control \| Trazza |
 | **Meta Description** | Gestiona tus rutas de retorno, encuentra cargas compatibles y monitorea tus envíos en tiempo real con Trazza. |
 | **Meta Keywords** | panel transportista, gestión de retornos, matching de carga, monitoreo GPS, dashboard logístico |
-| **Author** | Equipo StackRoot - UPC Ingeniería de Software |
+| **Author** | Equipo NexusLibre - UPC Ingeniería de Software |
 
 
 ### 4.2.4. Searching Systems.
