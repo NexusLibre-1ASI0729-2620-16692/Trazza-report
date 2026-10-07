@@ -1,0 +1,116 @@
+@startuml ClassDiagram_Matchmaking
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 12
+skinparam linetype ortho
+
+' Colores por tipo de componente
+skinparam class {
+    BackgroundColor<<Interface>> #E3F2FD
+    BackgroundColor<<AggregateRoot>> #FFF9C4
+    BackgroundColor<<Entity>> #E8F5E9
+    BackgroundColor #FAFAFA
+    BorderColor #9E9E9E
+    ArrowColor #424242
+}
+skinparam enum {
+    BackgroundColor #F3E5F5
+    BorderColor #9E9E9E
+}
+skinparam package {
+    BackgroundColor #FFFFFF
+    BorderColor #BDBDBD
+}
+
+' Aumentamos la separación para evitar que los textos choquen con las clases
+skinparam nodesep 150
+skinparam ranksep 90
+
+package "Trazza.API.MatchmakingContext" {
+    
+    class MatchController {
+        - _matchService: IMatchService
+        + SuggestMatches(cargaId: int): ActionResult<List<MatchDto>>
+        + AcceptMatch(matchId: int): ActionResult<bool>
+    }
+
+    interface IMatchService <<Interface>> {
+        + FindMatchesForCarga(cargaId: int): List<Match>
+        + ConfirmMatch(matchId: int): bool
+    }
+
+    class MatchService {
+        - _matchRepo: IMatchRepository
+        - _osrmClient: IOsrmClient
+        + FindMatchesForCarga(cargaId: int): List<Match>
+        + ConfirmMatch(matchId: int): bool
+        - CalculateCompatibility(ruta: RutaRetorno, carga: SolicitudCarga): float
+    }
+
+    interface IMatchRepository <<Interface>> {
+        + GetById(id: int): Match
+        + GetAvailableRutas(): List<RutaRetorno>
+        + Save(match: Match): void
+    }
+
+    class MatchRepository {
+        - _dbContext: AppDbContext
+        + GetById(id: int): Match
+        + GetAvailableRutas(): List<RutaRetorno>
+        + Save(match: Match): void
+    }
+
+    class SolicitudCarga <<Entity>> {
+        + Id: int
+        + EmprendedorId: int
+        + OrigenLatLon: string
+        + DestinoLatLon: string
+        + PesoRequerido: float
+        + IsAssigned: bool
+        + MarcarComoAsignada(): void
+    }
+
+    class Match <<AggregateRoot>> {
+        + Id: int
+        + RutaId: int
+        + CargaId: int
+        + Status: MatchStatus
+        + TarifaAcordada: decimal
+        + ConfirmarAcuerdo(): void
+        + CancelarAcuerdo(): void
+    }
+
+    class RutaRetorno <<Entity>> {
+        + Id: int
+        + TransportistaId: int
+        + OrigenLatLon: string
+        + DestinoLatLon: string
+        + CapacidadDisponible: float
+        + FechaSalida: DateTime
+        + RestarCapacidad(peso: float): void
+    }
+    
+    enum MatchStatus {
+        PENDING
+        ACCEPTED
+        REJECTED
+    }
+}
+
+' 1. JERARQUÍA HACIA ABAJO
+MatchController .down.> IMatchService : usa
+MatchService .down.> IMatchRepository : usa
+MatchService .down.> Match : procesa
+MatchRepository .down.> Match : persiste
+
+' 2. IMPLEMENTACIONES HACIA LOS COSTADOS
+MatchService .left.|> IMatchService : implementa
+MatchRepository .left.|> IMatchRepository : implementa
+
+' 3. COMPOSICIÓN DEL DOMINIO
+Match *-left-> SolicitudCarga : cubre
+Match *-right-> RutaRetorno : vincula
+Match *-down-> MatchStatus : tiene estado
+
+@enduml

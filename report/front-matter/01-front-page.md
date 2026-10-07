@@ -30,7 +30,7 @@ Proyecto
     <th style="border: none; text-align: left; padding: 5px 25px;">Apellidos y Nombres</th>
   </tr>
   <tr style="border: none;">
-    <td style="border: none; text-align: left; padding: 5px 25px;">[Código]</td>
+    <td style="border: none; text-align: left; padding: 5px 25px;">U202322695</td>
     <td style="border: none; text-align: left; padding: 5px 25px;">Checalla Apaza, Emanuel Renato</td>
   </tr>
   <tr style="border: none;">
@@ -42,7 +42,7 @@ Proyecto
     <td style="border: none; text-align: left; padding: 5px 25px;">Peñaranda Caldas, Gabriel Augusto</td>
   </tr>
   <tr style="border: none;">
-    <td style="border: none; text-align: left; padding: 5px 25px;">[Código]</td>
+    <td style="border: none; text-align: left; padding: 5px 25px;">U20221C590</td>
     <td style="border: none; text-align: left; padding: 5px 25px;">Pezo Castilla, Maria Jose</td>
   </tr>
   <tr style="border: none;">
@@ -55,6 +55,6 @@ Proyecto
 
 **Período 202620**
 
-**Septiembre 2026**
+**Octubre 2026**
 
 </div>
