@@ -1,6 +1,6 @@
 ## 5.1. Software Configuration Management
 
-En esta sección el equipo StackRoot establece las decisiones y convenciones que permiten mantener la consistencia de Trazza durante todo su ciclo de vida. Se describen las herramientas que utiliza cada integrante para colaborar, la organización de los repositorios en GitHub, el flujo de trabajo GitFlow, las convenciones de versionamiento y de mensajes de commit, las guías de estilo de cada lenguaje y la configuración de despliegue de los productos digitales de la solución: Landing Page, Frontend Web Application y RESTful Web Services.
+En esta sección el equipo NexusLibre establece las decisiones y convenciones que permiten mantener la consistencia de Trazza durante todo su ciclo de vida. Se describen las herramientas que utiliza cada integrante para colaborar, la organización de los repositorios en GitHub, el flujo de trabajo GitFlow, las convenciones de versionamiento y de mensajes de commit, las guías de estilo de cada lenguaje y la configuración de despliegue de los productos digitales de la solución: Landing Page, Frontend Web Application y RESTful Web Services.
 
 ### 5.1.1. Software Development Environment Configuration
 
@@ -11,7 +11,7 @@ A continuación se presentan los productos de software que utiliza el equipo, ag
 | Producto | Propósito en el proyecto | Tipo | Ruta |
 | :--- | :--- | :--- | :--- |
 | Jira Software | Gestión del Product Backlog, planificación de Sprints, tablero ágil (To-do / In-Process / To-Review / Done) y seguimiento de las tareas asignadas a cada integrante. | SaaS | [https://trazza.atlassian.net](https://trazza.atlassian.net/jira/software/projects/SCRUM/boards/1) |
-| GitHub (Organization) | Organización `StackRoot-1ASI0730-2620-8084`, que agrupa los repositorios del proyecto y la gestión de Pull Requests y revisiones de código. | SaaS | [https://github.com/StackRoot-1ASI0730-2620-8084](https://github.com/StackRoot-1ASI0730-2620-8084) |
+| GitHub (Organization) | Organización `NexusLibre-1ASI0729-2620-16692`, que agrupa los repositorios del proyecto y la gestión de Pull Requests y revisiones de código. | SaaS | [https://github.com/NexusLibre-1ASI0729-2620-16692](https://github.com/NexusLibre-1ASI0729-2620-16692) |
 | Microsoft Teams | Reuniones de Sprint Planning, Daily Scrum, Sprint Review y Sprint Retrospective. | SaaS / Desktop | [https://teams.microsoft.com](https://teams.microsoft.com) |
 
 #### Requirements Management
@@ -43,25 +43,27 @@ A continuación se presentan los productos de software que utiliza el equipo, ag
 | Producto | Propósito en el proyecto | Tipo | Ruta |
 | :--- | :--- | :--- | :--- |
 | Git | Sistema de control de versiones distribuido utilizado por todos los integrantes. | Desktop | [https://git-scm.com/downloads](https://git-scm.com/downloads) |
-| JetBrains WebStorm | IDE para el desarrollo del Landing Page (HTML5, CSS3, JavaScript) y de la Frontend Web Application (Vue). | Desktop | [https://www.jetbrains.com/webstorm/download/](https://www.jetbrains.com/webstorm/download/) |
+| JetBrains WebStorm | IDE para el desarrollo del Landing Page (HTML5, CSS3, JavaScript) y de la Frontend Web Application (Angular). | Desktop | [https://www.jetbrains.com/webstorm/download/](https://www.jetbrains.com/webstorm/download/) |
 | Visual Studio Code | Editor alternativo para el Landing Page, la Web Application y los archivos Markdown del informe. | Desktop | [https://code.visualstudio.com/download](https://code.visualstudio.com/download) |
-| Node.js (LTS) + npm | Entorno de ejecución y gestor de paquetes para construir la Web Application con Vite. | Desktop | [https://nodejs.org/en/download](https://nodejs.org/en/download) |
-| Vue 3 + Vite | Framework y herramienta de construcción de la Frontend Web Application. | Librería | [https://vuejs.org](https://vuejs.org) |
-| PrimeVue | Biblioteca de componentes de UI para la Web Application, con tema basado en Material Design. | Librería | [https://primevue.org](https://primevue.org) |
-| Vue Router · Pinia · Vue I18n | Navegación entre vistas, manejo de estado por bounded context e internacionalización (en_US por defecto, es_419). | Librería | [https://router.vuejs.org](https://router.vuejs.org) · [https://pinia.vuejs.org](https://pinia.vuejs.org) · [https://vue-i18n.intlify.dev](https://vue-i18n.intlify.dev) |
-| Axios | Cliente HTTP para consumir el Fake API (Sprint 2) y luego la RESTful API. | Librería | [https://axios-http.com](https://axios-http.com) |
-| json-server | Fake API basado en un archivo `db.json`, utilizado mientras se implementan los Web Services en ASP.NET Core. | Librería | [https://github.com/typicode/json-server](https://github.com/typicode/json-server) |
-| JetBrains Rider | IDE para el desarrollo de la RESTful API en C# con ASP.NET Core y Entity Framework Core. | Desktop | [https://www.jetbrains.com/rider/download/](https://www.jetbrains.com/rider/download/) |
-| .NET SDK | SDK para compilar y ejecutar los Web Services en ASP.NET Core. | Desktop | [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download) |
+| Node.js (LTS) + npm | Entorno de ejecución y gestor de paquetes para construir la Web Application con Angular CLI. | Desktop | [https://nodejs.org/en/download](https://nodejs.org/en/download) |
+| Angular + Angular CLI | Framework y herramienta de construcción de la Frontend Web Application con TypeScript. | Librería | [https://angular.dev](https://angular.dev) |
+| Angular Material | Biblioteca de componentes de UI para la Web Application, basada en Material Design. | Librería | [https://material.angular.dev](https://material.angular.dev) |
+| Angular Router · Signals · ngx-translate | Navegación entre vistas, manejo de estado por bounded context e internacionalización (en_US por defecto, es_419). | Librería | [https://angular.dev/guide/routing](https://angular.dev/guide/routing) · [https://angular.dev/guide/signals](https://angular.dev/guide/signals) · [https://github.com/ngx-translate/core](https://github.com/ngx-translate/core) |
+| Angular HttpClient | Cliente HTTP para consumir el Fake API (Sprint 2) y luego la RESTful API. | Librería | [https://angular.dev/guide/http](https://angular.dev/guide/http) |
+| json-server | Fake API basado en un archivo `db.json`, utilizado mientras se implementan los Web Services en Spring Boot. | Librería | [https://github.com/typicode/json-server](https://github.com/typicode/json-server) |
+| IntelliJ IDEA | IDE para el desarrollo de la RESTful API en Java con Spring Boot y Spring Data JPA. | Desktop | [https://www.jetbrains.com/idea/download/](https://www.jetbrains.com/idea/download/) |
+| JDK + Maven | Kit de desarrollo de Java y gestor de dependencias para compilar y ejecutar los Web Services en Spring Boot. | Desktop | [https://adoptium.net](https://adoptium.net) |
 | MySQL Server + MySQL Workbench | Motor de base de datos relacional y herramienta de administración y consultas. | Desktop | [https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/) |
 
 #### Software Testing
 
 | Producto | Propósito en el proyecto | Tipo | Ruta |
 | :--- | :--- | :--- | :--- |
-| Swagger UI (OpenAPI Specification) | Documentación y prueba manual de los endpoints de la RESTful API. | Librería | [https://swagger.io/tools/swagger-ui/](https://swagger.io/tools/swagger-ui/) |
+| Swagger UI (OpenAPI Specification) | Documentación y prueba manual de los endpoints de la RESTful API, integrada en Spring Boot mediante springdoc-openapi. | Librería | [https://swagger.io/tools/swagger-ui/](https://swagger.io/tools/swagger-ui/) |
 | Chrome DevTools | Pruebas de responsive design (Desktop 1280 px / Mobile 390 px), revisión de atributos ARIA y depuración de llamadas HTTP. | Desktop | [https://developer.chrome.com/docs/devtools](https://developer.chrome.com/docs/devtools) |
 | Lighthouse | Auditoría de accesibilidad, rendimiento y SEO del Landing Page y la Web Application. | Desktop | [https://developer.chrome.com/docs/lighthouse](https://developer.chrome.com/docs/lighthouse) |
+| Jasmine + Karma | Pruebas unitarias de la Frontend Web Application (por ejemplo, `route-matching.service.spec.ts`). | Librería | [https://angular.dev/guide/testing](https://angular.dev/guide/testing) |
+| JUnit 5 | Pruebas unitarias y de integración de la RESTful API en Spring Boot. | Librería | [https://junit.org/junit5/](https://junit.org/junit5/) |
 
 #### Software Deployment
 
@@ -75,20 +77,20 @@ A continuación se presentan los productos de software que utiliza el equipo, ag
 
 | Producto | Propósito en el proyecto | Tipo | Ruta |
 | :--- | :--- | :--- | :--- |
-| GitHub (Trazza-report) | Redacción y control de versiones del Project Report en Markdown. | SaaS | [https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-report](https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-report) |
+| GitHub (Trazza-report) | Redacción y control de versiones del Project Report en Markdown. | SaaS | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report) |
 | Microsoft Stream | Publicación de los videos de exposición, entrevistas y navegación por Sprint. | SaaS | [https://www.microsoft.com/microsoft-365/microsoft-stream](https://www.microsoft.com/microsoft-365/microsoft-stream) |
-| OpenAPI (Swagger) | Documentación de los Web Services desde el propio proyecto ASP.NET Core. | Especificación | [https://swagger.io/specification/](https://swagger.io/specification/) |
+| OpenAPI (Swagger) | Documentación de los Web Services desde el propio proyecto Spring Boot mediante springdoc-openapi. | Especificación | [https://swagger.io/specification/](https://swagger.io/specification/) |
 
 ### 5.1.2. Source Code Management
 
-El equipo utiliza GitHub como plataforma y sistema de control de versiones. Todos los repositorios pertenecen a la organización `StackRoot-1ASI0730-2620-8084`, y cada producto digital tiene un repositorio independiente, lo que permite que cada uno tenga su propio historial, su propia configuración de despliegue y sus propias versiones.
+El equipo utiliza GitHub como plataforma y sistema de control de versiones. Todos los repositorios pertenecen a la organización `NexusLibre-1ASI0729-2620-16692`, y cada producto digital tiene un repositorio independiente, lo que permite que cada uno tenga su propio historial, su propia configuración de despliegue y sus propias versiones.
 
 | Producto | Repositorio | Contenido |
 | :--- | :--- | :--- |
-| Project Report | [https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-report](https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-report) | Informe en Markdown, imágenes y diagramas como código (`.puml`). |
-| Landing Page | [https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-LandingPage](https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-LandingPage) | Sitio estático en HTML5, CSS3 y JavaScript con i18n (EN / ES). |
-| Frontend Web Application | [https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-WebApplication](https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-WebApplication) | Aplicación Vue 3 + PrimeVue organizada por bounded context y Fake API en `server/db.json`. |
-| Web Services (RESTful API) | `https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-WebAPI` (se crea en el Sprint 3) | Proyecto ASP.NET Core + Entity Framework Core y sus pruebas unitarias y de integración/aceptación. |
+| Project Report | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report) | Informe en Markdown, imágenes y diagramas como código (`.puml`). |
+| Landing Page | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-landingPage](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-landingPage) | Sitio estático en HTML5, CSS3 y JavaScript con i18n (EN / ES). |
+| Frontend Web Application | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-webApp](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-webApp) | Aplicación Angular + Angular Material organizada por bounded context (`iam`, `matchmaking`, `execution`, `billing`, `reputation` y `shared`) y Fake API en `server/db.json`. |
+| Web Services (RESTful API) | `https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-webServices` (se crea en el Sprint 3) | Proyecto Spring Boot + Spring Data JPA y sus pruebas unitarias y de integración/aceptación. |
 
 #### GitFlow Workflow
 
@@ -105,7 +107,7 @@ El equipo aplica el modelo de ramificación GitFlow propuesto por Vincent Driess
 
 | Tipo | Se crea desde | Se integra en | Convención de nombre | Ejemplos |
 | :--- | :--- | :--- | :--- | :--- |
-| Feature | `develop` | `develop` | `feature/<user-story-id>-<short-description>` en kebab-case e inglés. Para tareas sin User Story se usa el nombre del aspecto. | `feature/us03-sign-in`, `feature/us08-publish-return-route`, `feature/i18n-language-switch` |
+| Feature | `develop` | `develop` | `feature/<nombre-del-aspecto>` en kebab-case e inglés: el bounded context en la Web Application o la sección en el Landing Page. | `feature/matchmaking-routing`, `feature/loyalty-reputation`, `feature/hero-section` |
 | Release | `develop` | `main` y `develop` | `release/v<MAJOR>.<MINOR>.<PATCH>` | `release/v1.1.0`, `release/v0.1.0` |
 | Hotfix | `main` | `main` y `develop` | `hotfix/v<MAJOR>.<MINOR>.<PATCH>-<short-description>` | `hotfix/v1.1.1-mobile-menu-overflow` |
 
@@ -152,10 +154,10 @@ Los mensajes de commit siguen la especificación Conventional Commits 1.0.0, con
 
 Ejemplos tomados del historial del proyecto:
 
-* `feat: make the EN | ES language switch translate the site` (Trazza-LandingPage)
-* `feat: add real photos to the carriers and merchants sections` (Trazza-LandingPage)
-* `docs(chapter4): add web application mock up & userflows images` (Trazza-report)
-* `docs(chapter4): update web application ux ui design` (Trazza-report)
+* `feat(matchmaking): add route-matching domain service` (Trazza-webApp)
+* `test(matchmaking): add route-matching service unit tests` (Trazza-webApp)
+* `feat(i18n): add language engine and base translations` (Trazza-landingPage)
+* `style(header): add responsive navigation styles` (Trazza-landingPage)
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
@@ -188,23 +190,24 @@ Referencias: [Google JavaScript Style Guide](https://google.github.io/styleguide
 * Punto y coma al final de cada sentencia, comillas simples y funciones flecha en callbacks.
 * Uso de `async/await` para operaciones asíncronas.
 
-**Vue Framework**
+**Angular Framework y TypeScript**
 
-Referencia: [Vue Style Guide](https://vuejs.org/style-guide/) (reglas de prioridad A y B).
+Referencias: [Angular coding style guide](https://angular.dev/style-guide) y [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html).
 
-* Componentes en PascalCase y con nombres de más de una palabra (`ReturnRouteForm.vue`, `ShipmentHistoryTable.vue`).
-* Composition API con `<script setup>` y props declaradas con tipo.
-* Estructura de carpetas por bounded context: `src/iam`, `src/profiles-fleet`, `src/freight-publishing`, `src/matching`, `src/trip-tracking`, `src/reputation`, `src/subscriptions`, y dentro de cada uno `domain/model`, `application`, `infrastructure` y `presentation`.
-* Componentes de PrimeVue para la UI; textos de la interfaz siempre a través de `$t('key')` (Vue I18n).
+* Standalone components con clases en PascalCase y archivos en kebab-case (`freight-request-form.ts`, `freight-request-form.html`, `freight-request-form.css`).
+* Estructura de carpetas por bounded context: `src/app/iam`, `src/app/matchmaking`, `src/app/execution`, `src/app/billing`, `src/app/reputation` y `src/app/shared`, y dentro de cada uno `domain/model`, `application`, `infrastructure` y `presentation`.
+* Sufijos según el rol del archivo: `*.entity.ts`, `*.value-object.ts`, `*.store.ts`, `*-api.ts`, `*-api-endpoint.ts`, `*-assembler.ts` y `*.routes.ts`.
+* Estado por bounded context con Signals e inyección de dependencias con `inject()`; rutas con lazy loading protegidas con `iamGuard`.
+* Componentes de Angular Material para la UI; textos de la interfaz siempre a través de ngx-translate (`public/i18n/en.json` y `es.json`).
 
-**C# y ASP.NET Core**
+**Java y Spring Boot**
 
-Referencias: [C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) y [Microsoft ASP.NET Core Coding Guidelines](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#coding-guidelines).
+Referencias: [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) y [Spring Boot Features](https://docs.spring.io/spring-boot/reference/features/index.html).
 
-* PascalCase para clases, métodos y propiedades públicas (`ReturnRoute`, `GetByCarrierIdAsync`); camelCase para variables locales y parámetros; prefijo `_` para campos privados y prefijo `I` para interfaces (`IReturnRouteRepository`).
-* Una clase por archivo, sufijo `Async` en métodos asíncronos y uso de inyección de dependencias.
-* Organización por bounded context con capas `Domain`, `Application`, `Infrastructure` e `Interfaces` (controllers REST en plural, por ejemplo `/api/v1/return-routes`).
-* Endpoints documentados con OpenAPI mediante Swagger.
+* PascalCase para clases e interfaces (`ReturnRoute`, `ReturnRouteRepository`); camelCase para métodos, variables y parámetros (`findByCarrierId`); UPPER_SNAKE_CASE para constantes.
+* Paquetes en minúsculas organizados por bounded context, con capas `domain`, `application`, `infrastructure` e `interfaces` (controllers REST en plural, por ejemplo `/api/v1/return-routes`).
+* Una clase por archivo e inyección de dependencias por constructor.
+* Persistencia con Spring Data JPA y endpoints documentados con OpenAPI mediante springdoc-openapi (Swagger UI).
 
 **Gherkin**
 
@@ -220,23 +223,23 @@ La solución Trazza se compone de tres productos que se despliegan de forma inde
 
 | Producto | Repositorio / rama | Tecnología | Servicio de despliegue | URL pública |
 | :--- | :--- | :--- | :--- | :--- |
-| Landing Page | `Trazza-LandingPage` / `main` | HTML5, CSS3, JavaScript | AWS Amplify Hosting | [https://main.d3opwp5g5g1mc8.amplifyapp.com](https://main.d3opwp5g5g1mc8.amplifyapp.com) |
-| Frontend Web Application | `Trazza-WebApplication` / `main` | Vue 3, Vite, PrimeVue, Pinia, Vue Router, Vue I18n | AWS Amplify Hosting | `[URL de Amplify de la Web Application]` |
-| Fake API (temporal) | `Trazza-WebApplication` / `main` (carpeta `server`) | json-server | Render (Web Service) | `[URL de Render del Fake API]` |
-| RESTful API (Sprint 3) | `Trazza-WebAPI` / `main` | ASP.NET Core, C#, EF Core | AWS EC2 | Pendiente |
+| Landing Page | `Trazza-landingPage` / `main` | HTML5, CSS3, JavaScript | AWS Amplify Hosting | `[URL de Amplify del Landing Page]` |
+| Frontend Web Application | `Trazza-webApp` / `main` | Angular, Angular Material, TypeScript, ngx-translate | AWS Amplify Hosting | `[URL de Amplify de la Web Application]` |
+| Fake API (temporal) | `Trazza-webApp` / `main` (carpeta `server`) | json-server | Render (Web Service) | `[URL de Render del Fake API]` |
+| RESTful API (Sprint 3) | `Trazza-webServices` / `main` | Spring Boot, Java, Spring Data JPA | AWS EC2 | Pendiente |
 | Base de datos (Sprint 3) | — | MySQL | AWS RDS for MySQL | Pendiente |
 
 #### Landing Page (AWS Amplify Hosting)
 
 1. Ingresar a la consola de AWS Amplify y seleccionar **Create new app → GitHub**.
-2. Autorizar a AWS Amplify en la organización `StackRoot-1ASI0730-2620-8084` y seleccionar el repositorio `Trazza-LandingPage` y la rama `main`.
+2. Autorizar a AWS Amplify en la organización `NexusLibre-1ASI0729-2620-16692` y seleccionar el repositorio `Trazza-landingPage` y la rama `main`.
 3. Al ser un sitio estático, no se configura comando de build y el directorio de salida es la raíz del repositorio (`/`).
 4. Guardar y desplegar. Amplify publica el sitio en un dominio `*.amplifyapp.com` con HTTPS.
 5. Cada merge en `main` dispara automáticamente un nuevo despliegue (despliegue continuo).
 
 #### Frontend Web Application (AWS Amplify Hosting)
 
-1. En AWS Amplify, crear una nueva app conectada al repositorio `Trazza-WebApplication`, rama `main`.
+1. En AWS Amplify, crear una nueva app conectada al repositorio `Trazza-webApp`, rama `main`.
 2. Configurar el build en `amplify.yml`:
 
 ```yaml
@@ -250,7 +253,7 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: dist
+    baseDirectory: dist/trazza-web-application/browser
     files:
       - '**/*'
   cache:
@@ -258,8 +261,8 @@ frontend:
       - node_modules/**/*
 ```
 
-3. Agregar la variable de entorno `VITE_API_BASE_URL` con la URL pública del Fake API (en el Sprint 3 se reemplazará por la URL de la RESTful API).
-4. Agregar la regla Rewrites and redirects para que Vue Router funcione al recargar cualquier ruta:
+3. Configurar en `src/environments/environment.ts` la propiedad `platformProviderApiBaseUrl` con la URL pública del Fake API (en el Sprint 3 se reemplazará por la URL de la RESTful API).
+4. Agregar la regla Rewrites and redirects para que Angular Router funcione al recargar cualquier ruta:
 
 | Source address | Target address | Type |
 | :--- | :--- | :--- |
@@ -269,13 +272,13 @@ frontend:
 
 #### Fake API (Render)
 
-1. Crear un **Web Service** en Render conectado al repositorio `Trazza-WebApplication`.
-2. Configurar Root Directory `server`, Build Command `npm install` y Start Command `npx json-server db.json --host 0.0.0.0 --port $PORT`.
-3. Copiar la URL pública generada y registrarla como `VITE_API_BASE_URL` en AWS Amplify.
+1. Crear un **Web Service** en Render conectado al repositorio `Trazza-webApp`.
+2. Configurar Root Directory `server`, Build Command `npm install` y Start Command `npx json-server db.json --routes routes.json --host 0.0.0.0 --port $PORT` (el archivo `routes.json` agrega el prefijo `/api/v1`).
+3. Copiar la URL pública generada y registrarla en la propiedad `platformProviderApiBaseUrl` de `src/environments/environment.ts`.
 
 #### RESTful API y base de datos (planificado para el Sprint 3)
 
 1. Aprovisionar una instancia de AWS RDS for MySQL y restringir su Security Group para aceptar conexiones solo desde la instancia EC2 de la API.
-2. Publicar el proyecto ASP.NET Core en modo `Release` (`dotnet publish -c Release`) y ejecutarlo en una instancia AWS EC2 detrás de Nginx como proxy inverso.
-3. Configurar como variables de entorno `ASPNETCORE_ENVIRONMENT=Production`, la cadena de conexión a MySQL y la clave para la generación de tokens JWT, sin exponer credenciales en el repositorio.
-4. Habilitar Swagger UI en `/swagger` como evidencia de la documentación OpenAPI.
+2. Empaquetar el proyecto Spring Boot con `./mvnw clean package` y ejecutar el `.jar` generado (`java -jar target/*.jar`) en una instancia AWS EC2 detrás de Nginx como proxy inverso.
+3. Configurar como variables de entorno `SPRING_PROFILES_ACTIVE=prod`, la conexión a MySQL (`SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME` y `SPRING_DATASOURCE_PASSWORD`) y la clave para la generación de tokens JWT, sin exponer credenciales en el repositorio.
+4. Habilitar Swagger UI (springdoc-openapi) en `/swagger-ui/index.html` como evidencia de la documentación OpenAPI.
