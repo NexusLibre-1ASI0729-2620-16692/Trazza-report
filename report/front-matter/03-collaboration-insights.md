@@ -7,7 +7,7 @@ GitHub Collaboration Insights proporciona un cronograma que muestra las principa
 * Emanuel Renato Checalla Apaza (Emanuelca135)
 * Fabricio Jofred Lozano Quispe (FabricioZz15)
 * Gabriel Augusto Peñaranda Caldas (gapc2024)
-* Ingrid Melani Medina Merma (Grini913)
+* Maria Jose Pezo Castilla (MariaJosePezo)
 * Rodrigo Matias Vite Celis (rodriznnn)
 
 Se dividieron las siguientes ramas para la colaboración en el proyecto:
