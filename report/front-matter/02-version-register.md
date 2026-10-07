@@ -4,9 +4,13 @@
 | :--- | :--- | :--- | :--- |
 | 1.0 | 06/09/2026 | Gabriel Peñaranda | Elaboración del informe incluyendo el Capítulo 1 completado. |
 | 1.1 | 13/09/2026 | Gabriel Peñaranda | Aplicación de correcciones del profesor: reorganización de carpetas y archivos utilizando el formato "document as a code" proporcionado. |
-| 1.2 | 2026-09-15 | Pezo Castilla, Maria Jose | Revisión y actualización del análisis de Needfinding, incluyendo la definición de las Personas de Usuario correspondientes a los tres segmentos objetivo: empresas distribuidoras de bebidas, supervisores o encargados de flota y bodegas o minimercados. |
-| 1.3 | 2026-09-15 | Pezo Castilla, Maria Jose | Elaboración de la User Task Matrix, identificando las principales actividades realizadas por cada Persona y clasificando su frecuencia e importancia para el análisis de necesidades. |
-| 1.4 | 2026-09-16 | Pezo Castilla, Maria Jose | Elaboración de los User Journey Maps AS-IS para las tres Personas de Usuario, documentando objetivos, acciones, canales de interacción, pensamientos, emociones, problemas, puntos de dolor y oportunidades de mejora del proceso actual. |
-| 1.5 | 2026-09-16 | Pezo Castilla, Maria Jose | Elaboración de los Empathy Maps correspondientes a los tres segmentos objetivo, organizando la información relacionada con lo que los usuarios dicen, ven, hacen, escuchan, piensan y sienten, además de sus pains y gains. |
-| 1.6 | 2026-09-17 | Pezo Castilla, Maria Jose | Desarrollo de los Impact Maps para los tres segmentos objetivo, definiendo Business Goals SMART, Actors, Impacts, Deliverables y User Stories, manteniendo la trazabilidad entre los objetivos empresariales y las necesidades identificadas. |
-| 1.7 | 2026-09-17 | Pezo Castilla, Maria Jose | Documentación de los resultados del Needfinding, Impact Mapping y User Stories en el repositorio colaborativo de GitHub, organizando los contenidos para facilitar su revisión y continuidad por parte del equipo. |
+| 1.2 | 15/09/2026 | Ingrid Medina | Elaboración y redacción completa de la sección de Needfinding. |
+| 2.0 | 01/10/2026 | Emanuel Checalla | Corrección de mock-ups en Figma, avance del keynote del curso, incorporación de información relacionada al documento y reparación de enlaces. |
+| 2.1 | 02/10/2026 | Rodrigo Vite | Integración de los nuevos cambios de Figma y adición del user flow al documento. |
+| 2.2 | 02/10/2026 | Ingrid Medina | Corrección de los diagramas C4 y actualización del diagrama de base de datos. |
+| 2.3 | 03/10/2026 | Rodrigo Vite | Corrección y unificación del idioma en los wireframes. |
+| 2.4 | 04/10/2026 | Gabriel Peñaranda | Corrección de errores en el Capítulo 1 y Capítulo 5. |
+| 2.5 | 04/10/2026 | Fabricio Lozano | Incorporación de avances en el Capítulo 5 y avance en el desarrollo del código. |
+| 2.6 | 04/10/2026 | Gabriel Peñaranda | Subida y actualización de cambios y artefactos desde UXPressia. |
+| 2.7 | 04/10/2026 | Ingrid Medina | Mejora de los diagramas C4 mediante su migración a código en Structurizr. |
+| 2.8 | 05/10/2026 | Gabriel Peñaranda | Reestructuración de artefactos C4, correcciones mayores de redacción en los capítulos 1, 2, 4 y 5, y consolidación del Student Outcome para el hito TB1. |
