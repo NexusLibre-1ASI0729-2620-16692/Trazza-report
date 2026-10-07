@@ -1,6 +1,6 @@
 ## Project Report Collaboration Insights
 
-**URL del repositorio para el reporte del proyecto:** https://github.com/StackRoot-1ASI0730-2620-8084/Trazza-report
+**URL del repositorio para el reporte del proyecto:** https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report.git
 
 GitHub Collaboration Insights proporciona un cronograma que muestra las principales ramas y los procesos de fusión que han ocurrido. Todas las ramas se han generado siguiendo los principios de GitFlow, lo que garantiza una organización efectiva al utilizar un sistema de control de versiones.
 
