@@ -23,6 +23,7 @@ A continuación, se listan progresivamente los enlaces a las exposiciones corres
 | Hito | Título del Video | Enlace Microsoft Stream |
 | :--- | :--- | :--- |
 | **AV1** | Exposición Sprint Review AV1 | https://tinyurl.com/mrxzz2yd |
+| **TB1** | Exposición Sprint Review TB1 | [upc-pre-202620-1asi0729-16692-NexusLibre-keynote-tb1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210836_upc_edu_pe/IQB4iIieEXLgTY0NDGDKdOCWAffPuq2jSt2JscaEYz-EMaQ?e=R1rXS0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
 
 
 <!-- Salto de Pagina -->
