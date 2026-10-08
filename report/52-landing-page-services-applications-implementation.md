@@ -196,7 +196,7 @@ En esta sección se presentan las evidencias de ejecución de las funcionalidade
   <img src="../assets/images/chapter5/evidencia-sprint2-3.jpeg" alt="Evidencia de ejecución Sprint 2 - Vista 3" width="800">
 </div>
 
-**Video de navegación del Sprint 2:** [Agregar video](URL)
+**Video de navegación del Sprint 2:** [upc-pre-202620-1asi0729-16692-NexusLibre-keynote-tb1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210836_upc_edu_pe/IQB4iIieEXLgTY0NDGDKdOCWAffPuq2jSt2JscaEYz-EMaQ?e=R1rXS0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
