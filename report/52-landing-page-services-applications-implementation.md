@@ -81,7 +81,7 @@ Al cierre del Sprint 1, el Landing Page quedó publicado en una URL pública. Pr
   <img src="../assets/images/landingimplementada3.jpeg" alt="Landing Page v1 - Testimonials and footer" width="800">
 </div>
 
-**Video de navegación del Sprint 1:** [upc-pre-202620-1asi0730-8084-StackRoot-productnavigation-sprint-1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414356_upc_edu_pe/IQAHwNmBh-BrSIywebxTh1XRAXSQ67CxwXjsw4F17WnJ3nQ?e=dc5eL3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+**Video de navegación del Sprint 1:** [upc-pre-202620-1asi0729-16692-NexusLibre-productnavigation-sprint-1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414356_upc_edu_pe/IQAHwNmBh-BrSIywebxTh1XRAXSQ67CxwXjsw4F17WnJ3nQ?e=dc5eL3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
  
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
  
@@ -171,11 +171,16 @@ En esta sección se presentan las evidencias de desarrollo correspondientes al S
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | main | 8a1f2c3 | feat: init angular project structure | - | 2026-10-02 |
-| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | develop | 3b9c8d1 | feat: implement register and login forms | - | 2026-10-03 |
-| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | develop | d4e7a5b | feat: create base dashboard components | - | 2026-10-04 |
-| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/cap5-sprint2 | c710b44 | docs: add part of sprint 2 documentation | - | 2026-10-05 |
-| NexusLibre-1ASI0729-2620-16692/Trazza-report | develop | fde8d18 | Merge branch 'feature/chepter4-Diagramsv2' into develop | - | 2026-10-05 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/matchmaking-routing | 5c634ea | feat(matchmaking): add offer list view | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/matchmaking-routing | b284b81 | feat(matchmaking): add matchmaking routes | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/loyalty-reputation | e5149cf | feat(reputation): add rating dialog | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/service-execution-monitoring | 1bfcf78 | feat(execution): validate active shipment actions | - | 2026-10-08 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | develop | 7775dc6 | feat(billing): add BillingApi HTTP service | - | 2026-10-08 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/iam-profiles | 3b4605d | feat(iam): add vehicle list, card and form components | - | 2026-10-08 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-landingPage | feature/hero-section | 6faf336 | feat(hero): add call-to-action buttons and trust chips | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-landingPage | develop | d5a92ef | feat: redirect all auth actions to external web application and fix asset paths | - | 2026-10-08 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/51-software-configuration-management | 01472c6 | docs(chapter 5): updating software configuration management | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | develop | 16e4ea0 | doc: update deployment urls for web app and landing page | - | 2026-10-08 |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
@@ -213,6 +218,7 @@ En esta sección se presentan las evidencias relacionadas con el despliegue del 
 | :--- | :--- | :--- | :--- | :--- |
 | Frontend Web App | AWS Amplify | Trazza-webApp / main | https://main.d11tospvoprjej.amplifyapp.com | Active |
 | Landing Page v2 | AWS Amplify | Trazza-landingPage / main | https://main.dop9j8vefsnfj.amplifyapp.com | Active |
+| Fake API (json-server) | AWS EC2 | Trazza-webApp / main (carpeta `server`) | https://trazza-api2.duckdns.org/api/v1 | Active |
 
 **URL de despliegue (Web App):** https://main.d11tospvoprjej.amplifyapp.com
 
