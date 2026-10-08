@@ -183,10 +183,9 @@ En esta sección se presentan las evidencias de ejecución de las funcionalidade
 
 | Evidence | Description | Related User Story | Status |
 | :--- | :--- | :--- | :--- |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+| UI Component | Landing Page: Propuesta para Transportistas | US04 | Finalizado |
+| UI Component | Landing Page: Propuesta para Emprendedores | US05 | Finalizado |
+| UI Component | Landing Page: Testimonios de Éxito | US25 | Finalizado |
 
 <div align="center">
   <img src="../assets/images/chapter5/evidencia-sprint2.jpeg" alt="Evidencia de ejecución Sprint 2 - Vista 1" width="800">
@@ -201,10 +200,6 @@ En esta sección se presentan las evidencias de ejecución de las funcionalidade
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
 Dado que el objetivo principal del Sprint 2 se enfocó en el diseño, desarrollo y despliegue del **Frontend Web Application**, la implementación de la API REST y su documentación (Swagger/OpenAPI) se encuentra programada para los siguientes Sprints de integración.
-
-| Endpoint / Service | Method | Description | Documentation Evidence |
-| :--- | :---: | :--- | :--- |
-| N/A (Frontend Focus) | N/A | N/A | N/A |
 
 <div align="center">
   <!-- Evidencias de Swagger se agregarán en el Sprint 3 -->
