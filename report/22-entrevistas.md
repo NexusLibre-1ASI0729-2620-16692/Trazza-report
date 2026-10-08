@@ -137,7 +137,7 @@ Camila estaría dispuesta a utilizar una aplicación que la conecte automáticam
 
 Esta sección consolida la información recolectada en las entrevistas registradas en 2.2.2 y presenta, por cada segmento objetivo, las variables y los valores representativos a nivel objetivo y subjetivo que servirán de base para construir los User Personas de 2.3.1. Todas las características provienen de los resúmenes de entrevista y cada una indica los entrevistados que la sustentan.
 
-**Metodología del análisis**
+**Proceso de análisis**
 
 1. **Variables.** De cada resumen se extrajeron variables **objetivas** (datos demográficos, ocupación, dispositivos, aplicaciones, canales digitales y comportamientos verificables) y variables **subjetivas** (objetivos, frustraciones, motivaciones, personalidad, influencias y condiciones para adoptar la solución).
 2. **Cálculo.** Cada valor se presenta con la cantidad de entrevistados que lo declaran (n de N) y su porcentaje, calculado como n ÷ N × 100.
