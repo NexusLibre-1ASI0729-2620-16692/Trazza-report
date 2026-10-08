@@ -58,10 +58,10 @@ A continuación se detalla la arquitectura interna de los dos contenedores princ
 
 ### 4.6.4.1. Frontend Web Application Components
 
-![C4 Component Diagram Frontend](../assets/images/chapter4/domain-drive-architecture/Components-WebApp.png)
+![C4 Component Diagram Frontend](../assets/images/chapter4/domain-drive-architecture/Components-SPA.png)
 
 **Diagram key**
-![C4 Component Diagram Frontend](../assets/images/chapter4/domain-drive-architecture/Components-WebApp-key.png)
+![C4 Component Diagram Frontend](../assets/images/chapter4/domain-drive-architecture/Components-SPA-key.png)
 ### 4.6.4.2. API Application Components (Matchmaking Core)
 
 ![C4 Component Diagram API](../assets/images/chapter4/domain-drive-architecture/Components-API.png)
