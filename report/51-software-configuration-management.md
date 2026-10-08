@@ -12,7 +12,7 @@ A continuación se presentan los productos de software que utiliza el equipo, ag
 | :--- | :--- | :--- | :--- |
 | Jira Software | Gestión del Product Backlog, planificación de Sprints, tablero ágil (To-do / In-Process / To-Review / Done) y seguimiento de las tareas asignadas a cada integrante. | SaaS | [https://trazza.atlassian.net](https://trazza.atlassian.net/jira/software/projects/SCRUM/boards/1) |
 | GitHub (Organization) | Organización `NexusLibre-1ASI0729-2620-16692`, que agrupa los repositorios del proyecto y la gestión de Pull Requests y revisiones de código. | SaaS | [https://github.com/NexusLibre-1ASI0729-2620-16692](https://github.com/NexusLibre-1ASI0729-2620-16692) |
-| Microsoft Teams | Reuniones de Sprint Planning, Daily Scrum, Sprint Review y Sprint Retrospective. | SaaS / Desktop | [https://teams.microsoft.com](https://teams.microsoft.com) |
+| Discord | Reuniones de Sprint Planning, Daily Scrum, Sprint Review y Sprint Retrospective. | SaaS / Desktop | [https://discord.com](https://discord.com) |
 
 #### Requirements Management
 
@@ -35,8 +35,8 @@ A continuación se presentan los productos de software que utiliza el equipo, ag
 
 | Producto | Propósito en el proyecto | Tipo | Ruta |
 | :--- | :--- | :--- | :--- |
-| PlantUML (C4-PlantUML) | Diagramas como código (Diagram-as-Code) para el C4 Model (Context, Container y Component), el Class Diagram y el Database Diagram. Los archivos `.puml` se versionan en `assets/diagram-as-code` del repositorio del informe. | Open source | [https://plantuml.com](https://plantuml.com) |
-| Visual Studio Code + extensión PlantUML | Edición y previsualización local de los diagramas `.puml`. | Desktop | [https://code.visualstudio.com/download](https://code.visualstudio.com/download) |
+| Structurizr | Diagramas como código (Diagram-as-Code) para el C4 Model (Context, Container y Component), el Class Diagram y el Database Diagram. Los archivos se versionan en `assets/diagram-as-code` del repositorio del informe. | Open source | [https://structurizr.com](https://structurizr.com) |
+| Webstorm + extensión PlantUML | Edición y previsualización local de los diagramas. | Desktop | [https://www.jetbrains.com/webstorm/download/](https://www.jetbrains.com/webstorm/download/) |
 
 #### Software Development
 
@@ -70,7 +70,7 @@ A continuación se presentan los productos de software que utiliza el equipo, ag
 | Producto | Propósito en el proyecto | Tipo | Ruta |
 | :--- | :--- | :--- | :--- |
 | AWS Amplify Hosting | Publicación continua del Landing Page y de la Frontend Web Application a partir de la rama `main` de cada repositorio. | SaaS (Cloud) | [https://aws.amazon.com/amplify/hosting/](https://aws.amazon.com/amplify/hosting/) |
-| Render (Web Service) | Publicación temporal del Fake API (json-server) consumido por la primera versión de la Web Application. | SaaS (Cloud) | [https://render.com](https://render.com) |
+| EC2 | Publicación temporal del Fake API (json-server) consumido por la primera versión de la Web Application. | SaaS (Cloud) | [https://aws.amazon.com/ec2/](https://aws.amazon.com/ec2/) |
 | AWS EC2 · AWS RDS for MySQL | Infraestructura planificada para la RESTful API y su base de datos a partir del Sprint 3. | SaaS (Cloud) | [https://aws.amazon.com](https://aws.amazon.com) |
 
 #### Software Documentation
@@ -90,7 +90,7 @@ El equipo utiliza GitHub como plataforma y sistema de control de versiones. Todo
 | Project Report | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report) | Informe en Markdown, imágenes y diagramas como código (`.puml`). |
 | Landing Page | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-landingPage](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-landingPage) | Sitio estático en HTML5, CSS3 y JavaScript con i18n (EN / ES). |
 | Frontend Web Application | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-webApp](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-webApp) | Aplicación Angular + Angular Material organizada por bounded context (`iam`, `matchmaking`, `execution`, `billing`, `reputation` y `shared`) y Fake API en `server/db.json`. |
-| Web Services (RESTful API) | `https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-webServices` (se crea en el Sprint 3) | Proyecto Spring Boot + Spring Data JPA y sus pruebas unitarias y de integración/aceptación. |
+| Web Services (RESTful API) | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-WebAPI](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-WebAPI) | Proyecto Spring Boot + Spring Data JPA y sus pruebas unitarias y de integración/aceptación. |
 
 #### GitFlow Workflow
 
@@ -223,10 +223,10 @@ La solución Trazza se compone de tres productos que se despliegan de forma inde
 
 | Producto | Repositorio / rama | Tecnología | Servicio de despliegue | URL pública |
 | :--- | :--- | :--- | :--- | :--- |
-| Landing Page | `Trazza-landingPage` / `main` | HTML5, CSS3, JavaScript | AWS Amplify Hosting | `[URL de Amplify del Landing Page]` |
-| Frontend Web Application | `Trazza-webApp` / `main` | Angular, Angular Material, TypeScript, ngx-translate | AWS Amplify Hosting | `[URL de Amplify de la Web Application]` |
-| Fake API (temporal) | `Trazza-webApp` / `main` (carpeta `server`) | json-server | Render (Web Service) | `[URL de Render del Fake API]` |
-| RESTful API (Sprint 3) | `Trazza-webServices` / `main` | Spring Boot, Java, Spring Data JPA | AWS EC2 | Pendiente |
+| Landing Page | `Trazza-landingPage` / `main` | HTML5, CSS3, JavaScript | AWS Amplify Hosting | [https://main.dop9j8vefsnfj.amplifyapp.com](https://main.dop9j8vefsnfj.amplifyapp.com) |
+| Frontend Web Application | `Trazza-webApp` / `main` | Angular, Angular Material, TypeScript, ngx-translate | AWS Amplify Hosting | [https://main.d11tospvoprjej.amplifyapp.com](https://main.d11tospvoprjej.amplifyapp.com) |
+| Fake API (temporal) | `Trazza-webApp` / `main` (carpeta `server`) | json-server | AWS EC2 | [https://trazza-api2.duckdns.org/api/v1/users](https://trazza-api2.duckdns.org/api/v1/users) |
+| RESTful API (Sprint 3) | `Trazza-WebAPI` / `main` | Spring Boot, Java, Spring Data JPA | AWS EC2 | Pendiente |
 | Base de datos (Sprint 3) | — | MySQL | AWS RDS for MySQL | Pendiente |
 
 #### Landing Page (AWS Amplify Hosting)
@@ -270,11 +270,12 @@ frontend:
 
 5. Guardar y desplegar. Cada merge en `main` genera un nuevo build y despliegue.
 
-#### Fake API (Render)
+#### Fake API (AWS EC2)
 
-1. Crear un **Web Service** en Render conectado al repositorio `Trazza-webApp`.
-2. Configurar Root Directory `server`, Build Command `npm install` y Start Command `npx json-server db.json --routes routes.json --host 0.0.0.0 --port $PORT` (el archivo `routes.json` agrega el prefijo `/api/v1`).
-3. Copiar la URL pública generada y registrarla en la propiedad `platformProviderApiBaseUrl` de `src/environments/environment.ts`.
+1. Aprovisionar una instancia AWS EC2 con Node.js y clonar el repositorio `Trazza-webApp`.
+2. Desde la carpeta `server`, ejecutar `json-server --watch db.json --routes routes.json` (script `start.sh`) en el puerto `3000`. El archivo `routes.json` agrega el prefijo `/api/v1`.
+3. Configurar Nginx como proxy inverso hacia el puerto `3000` y asociar el dominio `trazza-api2.duckdns.org` a la IP pública de la instancia, con certificado HTTPS para que la Web Application desplegada en Amplify pueda consumir el API sin contenido mixto.
+4. Registrar la URL `https://trazza-api2.duckdns.org/api/v1` en la propiedad `platformProviderApiBaseUrl` de `src/environments/environment.ts`.
 
 #### RESTful API y base de datos (planificado para el Sprint 3)
 
