@@ -6,4 +6,4 @@ A continuación, se presenta el Impact Map unificado de Trazza, el cual articula
 
 ![Impact Map de Trazza](../assets/images/chapter3/impact-map.png)
 
-> Impact Mapping: [https://uxpressia.com/w/v8FzI/i/yOY8J](https://uxpressia.com/w/v8FzI/i/yOY8J)
+> Impact Mapping: [https://uxpressia.com/w/v8FzI/i/2a2fh](https://uxpressia.com/w/v8FzI/i/2a2fh)

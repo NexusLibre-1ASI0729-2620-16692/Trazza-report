@@ -7,13 +7,13 @@ A continuación, se presentan los arquetipos de nuestros segmentos objetivos. La
 
 #### User Persona del Segmento Objetivo 1: Transportistas de Carga Terrestre
 ![User Persona de Juan David Ramos, transportista de carga terrestre](../assets/images/chapter2/needfinding/user-persona-JuanDavid.png)
-> User Persona - Juan David Ramos: [https://uxpressia.com/w/v8FzI/p/7Mes0](https://uxpressia.com/w/v8FzI/p/7Mes0)
+> User Persona - Juan David Ramos: [https://uxpressia.com/w/v8FzI/p/BGu1Y](https://uxpressia.com/w/v8FzI/p/BGu1Y)
 
 <br>
 
 #### User Persona del Segmento Objetivo 2: Pequeños y Medianos Emprendedores
 ![User Persona de Valeria Torres, emprendedora MYPE](../assets/images/chapter2/needfinding/user-persona-ValeriaTorres.png)
-> User Persona - Valeria Torres: [https://uxpressia.com/w/v8FzI/p/tzGKz](https://uxpressia.com/w/v8FzI/p/tzGKz)
+> User Persona - Valeria Torres: [https://uxpressia.com/w/v8FzI/p/pSs7S](https://uxpressia.com/w/v8FzI/p/pSs7S)
 
 <br>
 
@@ -34,13 +34,13 @@ A continuación se presentan las versiones As-Is de los User Journey Maps, es de
 
 #### User Persona 1: Juan David Ramos
 ![User Journey Map de Juan David, buscando carga para retorno](../assets/images/chapter2/needfinding/user-journey-map-juan.png)
-> User Journey Map - Juan David Ramos: [https://uxpressia.com/w/v8FzI/m/1H5VY](https://uxpressia.com/w/v8FzI/m/1H5VY)
+> User Journey Map - Juan David Ramos: [https://uxpressia.com/w/v8FzI/m/IcF0z](https://uxpressia.com/w/v8FzI/m/IcF0z)
 
 <br>
 
 #### User Persona 2: Valeria Torres
 ![User Journey Map de Valeria, coordinando el envío de mercadería](../assets/images/chapter2/needfinding/user-journey-map-valeria.png)
-> User Journey Map - Valeria Torres: [https://uxpressia.com/w/v8FzI/m/rEbN7](https://uxpressia.com/w/v8FzI/m/rEbN7)
+> User Journey Map - Valeria Torres: [https://uxpressia.com/w/v8FzI/m/C2PPv](https://uxpressia.com/w/v8FzI/m/C2PPv)
 
 <br>
 
@@ -49,10 +49,10 @@ Para la elaboración de estos Empathy Maps, el equipo analizó las respuestas y 
 
 #### User Persona 1: Juan David Ramos
 ![Empathy Map de Juan David](../assets/images/chapter2/needfinding/empathy-map-juan.png)
-> Empathy Map - Juan David Ramos: [https://uxpressia.com/w/v8FzI/p/K9mve](https://uxpressia.com/w/v8FzI/p/K9mve)
+> Empathy Map - Juan David Ramos: [https://uxpressia.com/w/v8FzI/p/GiEil](https://uxpressia.com/w/v8FzI/p/GiEil)
 
 <br>
 
 #### User Persona 2: Valeria Torres
 ![Empathy Map de Valeria](../assets/images/chapter2/needfinding/empathy-map-valeria.png)
-> Empathy Map - Valeria Torres: [https://uxpressia.com/w/v8FzI/p/SQmML](https://uxpressia.com/w/v8FzI/p/SQmML)
+> Empathy Map - Valeria Torres: [https://uxpressia.com/w/v8FzI/p/3b6Qf](https://uxpressia.com/w/v8FzI/p/3b6Qf)
