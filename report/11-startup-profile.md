@@ -3,7 +3,7 @@
 
 ### 1.1.1. Descripción de la Startup
 
-**NexusLibre** es una startup tecnológica impulsada por estudiantes de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas (UPC). Nos especializamos en concebir, construir y lanzar aplicaciones web de código abierto que destacan por su escalabilidad, alto rendimiento y diseño accesible. Nuestro propósito es transformar la logística y la cadena de suministro a través de soluciones digitales sostenibles e innovadoras, aplicando metodologías ágiles y rigurosos estándares de la industria para asegurar entregas impactantes y de alta calidad.
+**NexusLibre** es una startup tecnológica impulsada por estudiantes de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas (UPC). Nos especializamos en concebir, construir y lanzar aplicaciones web de código abierto que destacan por su escalabilidad, alto rendimiento y diseño accesible. Nuestro propósito es transformar la logística y la cadena de suministro a través de soluciones digitales sostenibles e innovadoras, aplicando marcos de trabajo ágiles y rigurosos estándares de la industria para asegurar entregas impactantes y de alta calidad.
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
