@@ -48,7 +48,7 @@ El objetivo del Sprint 1 fue publicar la primera versión del Landing Page. Las 
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **User Story** | | **Work-Item / Task** | | | | | |
 | **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
-| US04 | Landing Page: Propuesta para Transportistas | T01 | Estructura base del repositorio | Crear el repositorio `Trazza-LandingPage` y la estructura inicial del sitio. | 4 | Pezo Castilla, Maria Jose | Done |
+| US04 | Landing Page: Propuesta para Transportistas | T01 | Estructura base del repositorio | Crear el repositorio `Trazza-landingPage` y la estructura inicial del sitio. | 4 | Pezo Castilla, Maria Jose | Done |
 | US04 | Landing Page: Propuesta para Transportistas | T02 | Header, navegación y Hero | Implementar la barra de navegación responsive y la sección Hero con los botones por rol. | 6 | Peñaranda Caldas, Gabriel Augusto | Done |
 | US04 | Landing Page: Propuesta para Transportistas | T03 | Sección para transportistas | Maquetar los beneficios para el transportista y el llamado a registrarse. | 4 | Peñaranda Caldas, Gabriel Augusto | Done |
 | US05 | Landing Page: Propuesta para Emprendedores | T04 | Sección para comerciantes y comparativa | Maquetar los beneficios para el comerciante MYPE y la comparativa frente al flete tradicional. | 5 | Peñaranda Caldas, Gabriel Augusto | Done |
@@ -61,13 +61,13 @@ En el Sprint 1 se creó el repositorio del Landing Page y se implementó su prim
  
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| StackRoot-1ASI0730-2620-8084/Trazza-LandingPage | main | f5ef775 | first commit | - | 2026-09-11 |
-| StackRoot-1ASI0730-2620-8084/Trazza-LandingPage | main | 27773c4 | feat: creando nuevo repositorio debido a los errores del anterior | - | 2026-09-18 |
-| StackRoot-1ASI0730-2620-8084/Trazza-report | feature/43-landing-page-ui-design | 11323a7 | docs(landing): add landing wireframes images | - | 2026-09-18 |
-| StackRoot-1ASI0730-2620-8084/Trazza-report | feature/43-landing-page-ui-design | be862b6 | docs(landing): add landing mock ups desk images | - | 2026-09-18 |
-| StackRoot-1ASI0730-2620-8084/Trazza-report | feature/43-landing-page-ui-design | a05df02 | docs(chapter4): add landing page ui design desktop wireframes and mockups descriptions | - | 2026-09-18 |
-| StackRoot-1ASI0730-2620-8084/Trazza-report | feature/51-software-configuration-management | 78675b9 | doc(5.1): add complete content for software configuration management | - | 2026-09-18 |
-| StackRoot-1ASI0730-2620-8084/Trazza-report | feature/52-landing-page-services-applications-implementation | 84eb2d8 | doc(5.2): populate sprint 1 implementation and evidence sections | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-landingPage | main | f5ef775 | first commit | - | 2026-09-11 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-landingPage | main | 27773c4 | feat: creando nuevo repositorio debido a los errores del anterior | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/43-landing-page-ui-design | 11323a7 | docs(landing): add landing wireframes images | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/43-landing-page-ui-design | be862b6 | docs(landing): add landing mock ups desk images | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/43-landing-page-ui-design | a05df02 | docs(chapter4): add landing page ui design desktop wireframes and mockups descriptions | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/51-software-configuration-management | 78675b9 | doc(5.1): add complete content for software configuration management | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/52-landing-page-services-applications-implementation | 84eb2d8 | doc(5.2): populate sprint 1 implementation and evidence sections | - | 2026-09-18 |
  
 #### 5.2.1.5. Execution Evidence for Sprint Review
  
@@ -81,33 +81,33 @@ Al cierre del Sprint 1, el Landing Page quedó publicado en una URL pública. Pr
   <img src="../assets/images/landingimplementada3.jpeg" alt="Landing Page v1 - Testimonials and footer" width="800">
 </div>
 
-**Video de navegación del Sprint 1:** [upc-pre-202620-1asi0730-8084-StackRoot-productnavigation-sprint-1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414356_upc_edu_pe/IQAHwNmBh-BrSIywebxTh1XRAXSQ67CxwXjsw4F17WnJ3nQ?e=dc5eL3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+**Video de navegación del Sprint 1:** [upc-pre-202620-1asi0729-16692-NexusLibre-productnavigation-sprint-1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414356_upc_edu_pe/IQAHwNmBh-BrSIywebxTh1XRAXSQ67CxwXjsw4F17WnJ3nQ?e=dc5eL3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
  
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
  
-El alcance del Sprint 1 se limitó al Landing Page, que es un sitio estático. Por ello, en este Sprint no se implementaron ni documentaron endpoints con OpenAPI. Los Web Services de Trazza se implementarán en ASP.NET Core en un Sprint posterior.
+El alcance del Sprint 1 se limitó al Landing Page, que es un sitio estático. Por ello, en este Sprint no se implementaron ni documentaron endpoints con OpenAPI. Los Web Services de Trazza se implementarán en Spring Boot en un Sprint posterior.
  
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
  
-En el Sprint 1 se creó la aplicación en AWS Amplify Hosting y se conectó con la rama `main` del repositorio `Trazza-LandingPage`, siguiendo los pasos descritos en la sección 5.1.4. Al ser un sitio estático, no requiere comando de build. Desde entonces, cada cambio integrado en `main` se publica automáticamente.
+En el Sprint 1 se creó la aplicación en AWS Amplify Hosting y se conectó con la rama `main` del repositorio `Trazza-landingPage`, siguiendo los pasos descritos en la sección 5.1.4. Al ser un sitio estático, no requiere comando de build. Desde entonces, cada cambio integrado en `main` se publica automáticamente.
  
-**URL del Landing Page:** [https://main.d3opwp5g5g1mc8.amplifyapp.com](https://main.d3opwp5g5g1mc8.amplifyapp.com)
+**URL del Landing Page:** [https://main.dop9j8vefsnfj.amplifyapp.com](https://main.dop9j8vefsnfj.amplifyapp.com)
  
 <div align="center">
   <img src="../assets/images/trazzalandingpagedesplegada.jpeg" alt="Landing Page v1 deployed on AWS Amplify" width="800">
 </div>
 #### 5.2.1.8. Team Collaboration Insights during Sprint
  
-En el Sprint 1 el equipo trabajó en dos repositorios. En `Trazza-LandingPage` se registraron 2 commits: Pezo Castilla, Maria Jose (estructura inicial) y Peñaranda Caldas, Gabriel Augusto (primera versión completa), ambos directamente en `main`. En `Trazza-report` cada sección del informe se trabajó en su rama `feature/*` y se integró a `develop` mediante Pull Requests, con commits de los cinco integrantes.
+En el Sprint 1 el equipo trabajó en dos repositorios. En `Trazza-landingPage` se registraron 2 commits: Pezo Castilla, Maria Jose (estructura inicial) y Peñaranda Caldas, Gabriel Augusto (primera versión completa), ambos directamente en `main`. En `Trazza-report` cada sección del informe se trabajó en su rama `feature/*` y se integró a `develop` mediante Pull Requests, con commits de los cinco integrantes.
  
 Los gráficos de Contributors muestran las contribuciones semanales de cada integrante. Las barras de las semanas del 7 y 14 de septiembre corresponden al Sprint 1.
  
 <div align="center">
-  <img src="../assets/images/chapter5/insights-landing-contributors.png" alt="GitHub Insights - Trazza-LandingPage contributors" width="800">
+  <img src="../assets/images/chapter5/insights-landing-contributors.png" alt="GitHub Insights - Trazza-landingPage contributors" width="800">
   <br><br>
   <img src="../assets/images/chapter5/insights-report-contributors.png" alt="GitHub Insights - Trazza-report contributors" width="800">
   <br><br>
-  <img src="../assets/images/chapter5/sprint1-commits-landing.png" alt="Trazza-LandingPage commits during Sprint 1" width="800">
+  <img src="../assets/images/chapter5/sprint1-commits-landing.png" alt="Trazza-landingPage commits during Sprint 1" width="800">
   <br><br>
   <img src="../assets/images/chapter5/sprint1-commits-report.png" alt="Trazza-report commits during Sprint 1" width="800">
 </div>
@@ -171,11 +171,16 @@ En esta sección se presentan las evidencias de desarrollo correspondientes al S
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| StackRoot-1ASI0730-2620-8084/Trazza-WebApplication | main | 8a1f2c3 | feat: init angular project structure | - | 2026-10-02 |
-| StackRoot-1ASI0730-2620-8084/Trazza-WebApplication | develop | 3b9c8d1 | feat: implement register and login forms | - | 2026-10-03 |
-| StackRoot-1ASI0730-2620-8084/Trazza-WebApplication | develop | d4e7a5b | feat: create base dashboard components | - | 2026-10-04 |
-| StackRoot-1ASI0730-2620-8084/Trazza-report | feature/cap5-sprint2 | c710b44 | docs: add part of sprint 2 documentation | - | 2026-10-05 |
-| StackRoot-1ASI0730-2620-8084/Trazza-report | develop | fde8d18 | Merge branch 'feature/chepter4-Diagramsv2' into develop | - | 2026-10-05 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/matchmaking-routing | 5c634ea | feat(matchmaking): add offer list view | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/matchmaking-routing | b284b81 | feat(matchmaking): add matchmaking routes | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/loyalty-reputation | e5149cf | feat(reputation): add rating dialog | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/service-execution-monitoring | 1bfcf78 | feat(execution): validate active shipment actions | - | 2026-10-08 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | develop | 7775dc6 | feat(billing): add BillingApi HTTP service | - | 2026-10-08 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | feature/iam-profiles | 3b4605d | feat(iam): add vehicle list, card and form components | - | 2026-10-08 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-landingPage | feature/hero-section | 6faf336 | feat(hero): add call-to-action buttons and trust chips | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-landingPage | develop | d5a92ef | feat: redirect all auth actions to external web application and fix asset paths | - | 2026-10-08 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/51-software-configuration-management | 01472c6 | docs(chapter 5): updating software configuration management | - | 2026-10-07 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | develop | 16e4ea0 | doc: update deployment urls for web app and landing page | - | 2026-10-08 |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
@@ -183,10 +188,9 @@ En esta sección se presentan las evidencias de ejecución de las funcionalidade
 
 | Evidence | Description | Related User Story | Status |
 | :--- | :--- | :--- | :--- |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+| UI Component | Landing Page: Propuesta para Transportistas | US04 | Finalizado |
+| UI Component | Landing Page: Propuesta para Emprendedores | US05 | Finalizado |
+| UI Component | Landing Page: Testimonios de Éxito | US25 | Finalizado |
 
 <div align="center">
   <img src="../assets/images/chapter5/evidencia-sprint2.jpeg" alt="Evidencia de ejecución Sprint 2 - Vista 1" width="800">
@@ -196,15 +200,11 @@ En esta sección se presentan las evidencias de ejecución de las funcionalidade
   <img src="../assets/images/chapter5/evidencia-sprint2-3.jpeg" alt="Evidencia de ejecución Sprint 2 - Vista 3" width="800">
 </div>
 
-**Video de navegación del Sprint 2:** [Agregar video](URL)
+**Video de navegación del Sprint 2:** [upc-pre-202620-1asi0729-16692-NexusLibre-keynote-tb1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210836_upc_edu_pe/IQB4iIieEXLgTY0NDGDKdOCWAffPuq2jSt2JscaEYz-EMaQ?e=R1rXS0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
 Dado que el objetivo principal del Sprint 2 se enfocó en el diseño, desarrollo y despliegue del **Frontend Web Application**, la implementación de la API REST y su documentación (Swagger/OpenAPI) se encuentra programada para los siguientes Sprints de integración.
-
-| Endpoint / Service | Method | Description | Documentation Evidence |
-| :--- | :---: | :--- | :--- |
-| N/A (Frontend Focus) | N/A | N/A | N/A |
 
 <div align="center">
   <!-- Evidencias de Swagger se agregarán en el Sprint 3 -->
@@ -216,10 +216,11 @@ En esta sección se presentan las evidencias relacionadas con el despliegue del 
 
 | Software Component | Deployment Platform | Repository / Branch | Deployment URL | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| Frontend Web App | AWS Amplify (o Vercel/Netlify) | Trazza-WebApplication / main | https://main.d1h7l9z3r6ucz4.amplifyapp.com | Active |
-| Landing Page v2 | AWS Amplify | Trazza-LandingPage / main | https://main.d3opwp5g5g1mc8.amplifyapp.com | Active |
+| Frontend Web App | AWS Amplify | Trazza-webApp / main | https://main.d11tospvoprjej.amplifyapp.com | Active |
+| Landing Page v2 | AWS Amplify | Trazza-landingPage / main | https://main.dop9j8vefsnfj.amplifyapp.com | Active |
+| Fake API (json-server) | AWS EC2 | Trazza-webApp / main (carpeta `server`) | https://trazza-api2.duckdns.org/api/v1 | Active |
 
-**URL de despliegue (Web App):** https://main.d1h7l9z3r6ucz4.amplifyapp.com
+**URL de despliegue (Web App):** https://main.d11tospvoprjej.amplifyapp.com
 
 <div align="center">
   <img src="../assets/images/chapter5/sprint2-softwaredeploymentconfiguration.jpeg" alt="Sprint 2 - Software Deployment Evidence" width="800">
@@ -231,11 +232,11 @@ En esta sección se presentan las evidencias de colaboración del equipo durante
 
 | Team Member | GitHub Username | Repository | Commits | Pull Requests | Main Contribution |
 | :--- | :--- | :--- | :---: | :---: | :--- |
-| Checalla Apaza, Emanuel Renato | Emanuelca135 | Trazza-WebApplication / Trazza-report | 8 | 2 | Desarrollo del registro de Emprendedor y documentación. |
-| Lozano Quispe, Fabricio Jofred | FabricioZz15 | Trazza-WebApplication / Trazza-report | 7 | 2 | Interfaz del Dashboard de Transportista y diseño UI. |
-| Pezo Castilla, Maria Jose | Grini913 | Trazza-WebApplication / Trazza-report | 10 | 3 | Despliegue, estructura base, y Registro de Transportista. |
-| Peñaranda Caldas, Gabriel Augusto | gapc2124 | Trazza-WebApplication / Trazza-report | 12 | 3 | Login, ruteo de la aplicación, y resolución de conflictos. |
-| Vite Celis, Rodrigo Matias | rodriznnn | Trazza-WebApplication / Trazza-report | 7 | 2 | Interfaz del Dashboard de Emprendedor (solicitud de carga). |
+| Checalla Apaza, Emanuel Renato | Emanuelca135 | Trazza-webApp / Trazza-report | 8 | 2 | Desarrollo del registro de Emprendedor y documentación. |
+| Lozano Quispe, Fabricio Jofred | FabricioZz15 | Trazza-webApp / Trazza-report | 7 | 2 | Interfaz del Dashboard de Transportista y diseño UI. |
+| Pezo Castilla, Maria Jose | Grini913 | Trazza-webApp / Trazza-report | 10 | 3 | Despliegue, estructura base, y Registro de Transportista. |
+| Peñaranda Caldas, Gabriel Augusto | gapc2124 | Trazza-webApp / Trazza-report | 12 | 3 | Login, ruteo de la aplicación, y resolución de conflictos. |
+| Vite Celis, Rodrigo Matias | rodriznnn | Trazza-webApp / Trazza-report | 7 | 2 | Interfaz del Dashboard de Emprendedor (solicitud de carga). |
 
 Los gráficos de Contributors muestran las contribuciones realizadas por cada integrante durante el Sprint 2.
 
