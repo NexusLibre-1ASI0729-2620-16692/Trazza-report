@@ -3282,6 +3282,640 @@ Esta organización mantiene una separación lógica entre los distintos dominios
 
 > *Fuente: Elaboración propia. Ver **Anexo G – Diagrama de Base de Datos Completo** para el diagrama interactivo.*
 
+## 5.1. Software Configuration Management
+
+En esta sección el equipo NexusLibre establece las decisiones y convenciones que permiten mantener la consistencia de Trazza durante todo su ciclo de vida. Se describen las herramientas que utiliza cada integrante para colaborar, la organización de los repositorios en GitHub, el flujo de trabajo GitFlow, las convenciones de versionamiento y de mensajes de commit, las guías de estilo de cada lenguaje y la configuración de despliegue de los productos digitales de la solución: Landing Page, Frontend Web Application y RESTful Web Services.
+
+### 5.1.1. Software Development Environment Configuration
+
+A continuación se presentan los productos de software que utiliza el equipo, agrupados por tipo de actividad. Para cada producto se indica el propósito de uso dentro del proyecto y la ruta de referencia (productos SaaS) o la ruta de descarga (productos que se instalan en el computador de cada integrante). La selección respeta las restricciones tecnológicas establecidas para el proyecto.
+
+#### Project Management
+
+| Producto | Propósito en el proyecto | Tipo | Ruta |
+| :--- | :--- | :--- | :--- |
+| Jira Software | Gestión del Product Backlog, planificación de Sprints, tablero ágil (To-do / In-Process / To-Review / Done) y seguimiento de las tareas asignadas a cada integrante. | SaaS | [https://trazza.atlassian.net](https://trazza.atlassian.net/jira/software/projects/SCRUM/boards/1) |
+| GitHub (Organization) | Organización `NexusLibre-1ASI0729-2620-16692`, que agrupa los repositorios del proyecto y la gestión de Pull Requests y revisiones de código. | SaaS | [https://github.com/NexusLibre-1ASI0729-2620-16692](https://github.com/NexusLibre-1ASI0729-2620-16692) |
+| Discord | Reuniones de Sprint Planning, Daily Scrum, Sprint Review y Sprint Retrospective. | SaaS / Desktop | [https://discord.com](https://discord.com) |
+
+#### Requirements Management
+
+| Producto | Propósito en el proyecto | Tipo | Ruta |
+| :--- | :--- | :--- | :--- |
+| Jira Software | Registro de Epics y User Stories, estimación en Story Points (escala Fibonacci) y priorización del Product Backlog. | SaaS | [https://trazza.atlassian.net](https://trazza.atlassian.net/jira/software/projects/SCRUM/boards/1) |
+| Gherkin | Lenguaje para redactar los criterios de aceptación de cada User Story bajo la estructura Given / When / Then. | Especificación | [https://cucumber.io/docs/gherkin/reference/](https://cucumber.io/docs/gherkin/reference/) |
+| GitHub Markdown | Documentación versionada de requisitos y del Project Report bajo el enfoque document as code. | SaaS | [https://docs.github.com/en/get-started/writing-on-github](https://docs.github.com/en/get-started/writing-on-github) |
+
+#### Product UX/UI Design
+
+| Producto | Propósito en el proyecto | Tipo | Ruta |
+| :--- | :--- | :--- | :--- |
+| UXPressia | Elaboración de User Personas, Empathy Maps, User Journey Maps e Impact Maps. | SaaS | [https://uxpressia.com](https://uxpressia.com) |
+| Figma | Diseño de Wireframes, Mock-ups y Prototypes del Landing Page y de la Web Application (Desktop y Mobile). | SaaS | [https://www.figma.com](https://www.figma.com) |
+| FigJam | Elaboración del EventStorming, Wireflow Diagrams y User Flow Diagrams. | SaaS | [https://www.figma.com/figjam/](https://www.figma.com/figjam/) |
+| Material Design 3 | Lenguaje de diseño base para la interfaz del Landing Page y de la Web Application. | Guía | [https://m3.material.io](https://m3.material.io) |
+
+#### Software Architecture & Design
+
+| Producto | Propósito en el proyecto | Tipo | Ruta |
+| :--- | :--- | :--- | :--- |
+| Structurizr | Diagramas como código (Diagram-as-Code) para el C4 Model (Context, Container y Component), el Class Diagram y el Database Diagram. Los archivos se versionan en `assets/diagram-as-code` del repositorio del informe. | Open source | [https://structurizr.com](https://structurizr.com) |
+| Webstorm + extensión PlantUML | Edición y previsualización local de los diagramas. | Desktop | [https://www.jetbrains.com/webstorm/download/](https://www.jetbrains.com/webstorm/download/) |
+
+#### Software Development
+
+| Producto | Propósito en el proyecto | Tipo | Ruta |
+| :--- | :--- | :--- | :--- |
+| Git | Sistema de control de versiones distribuido utilizado por todos los integrantes. | Desktop | [https://git-scm.com/downloads](https://git-scm.com/downloads) |
+| JetBrains WebStorm | IDE para el desarrollo del Landing Page (HTML5, CSS3, JavaScript) y de la Frontend Web Application (Angular). | Desktop | [https://www.jetbrains.com/webstorm/download/](https://www.jetbrains.com/webstorm/download/) |
+| Visual Studio Code | Editor alternativo para el Landing Page, la Web Application y los archivos Markdown del informe. | Desktop | [https://code.visualstudio.com/download](https://code.visualstudio.com/download) |
+| Node.js (LTS) + npm | Entorno de ejecución y gestor de paquetes para construir la Web Application con Angular CLI. | Desktop | [https://nodejs.org/en/download](https://nodejs.org/en/download) |
+| Angular + Angular CLI | Framework y herramienta de construcción de la Frontend Web Application con TypeScript. | Librería | [https://angular.dev](https://angular.dev) |
+| Angular Material | Biblioteca de componentes de UI para la Web Application, basada en Material Design. | Librería | [https://material.angular.dev](https://material.angular.dev) |
+| Angular Router · Signals · ngx-translate | Navegación entre vistas, manejo de estado por bounded context e internacionalización (en_US por defecto, es_419). | Librería | [https://angular.dev/guide/routing](https://angular.dev/guide/routing) · [https://angular.dev/guide/signals](https://angular.dev/guide/signals) · [https://github.com/ngx-translate/core](https://github.com/ngx-translate/core) |
+| Angular HttpClient | Cliente HTTP para consumir el Fake API (Sprint 2) y luego la RESTful API. | Librería | [https://angular.dev/guide/http](https://angular.dev/guide/http) |
+| json-server | Fake API basado en un archivo `db.json`, utilizado mientras se implementan los Web Services en Spring Boot. | Librería | [https://github.com/typicode/json-server](https://github.com/typicode/json-server) |
+| IntelliJ IDEA | IDE para el desarrollo de la RESTful API en Java con Spring Boot y Spring Data JPA. | Desktop | [https://www.jetbrains.com/idea/download/](https://www.jetbrains.com/idea/download/) |
+| JDK + Maven | Kit de desarrollo de Java y gestor de dependencias para compilar y ejecutar los Web Services en Spring Boot. | Desktop | [https://adoptium.net](https://adoptium.net) |
+| MySQL Server + MySQL Workbench | Motor de base de datos relacional y herramienta de administración y consultas. | Desktop | [https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/) |
+
+#### Software Testing
+
+| Producto | Propósito en el proyecto | Tipo | Ruta |
+| :--- | :--- | :--- | :--- |
+| Swagger UI (OpenAPI Specification) | Documentación y prueba manual de los endpoints de la RESTful API, integrada en Spring Boot mediante springdoc-openapi. | Librería | [https://swagger.io/tools/swagger-ui/](https://swagger.io/tools/swagger-ui/) |
+| Chrome DevTools | Pruebas de responsive design (Desktop 1280 px / Mobile 390 px), revisión de atributos ARIA y depuración de llamadas HTTP. | Desktop | [https://developer.chrome.com/docs/devtools](https://developer.chrome.com/docs/devtools) |
+| Lighthouse | Auditoría de accesibilidad, rendimiento y SEO del Landing Page y la Web Application. | Desktop | [https://developer.chrome.com/docs/lighthouse](https://developer.chrome.com/docs/lighthouse) |
+| Jasmine + Karma | Pruebas unitarias de la Frontend Web Application (por ejemplo, `route-matching.service.spec.ts`). | Librería | [https://angular.dev/guide/testing](https://angular.dev/guide/testing) |
+| JUnit 5 | Pruebas unitarias y de integración de la RESTful API en Spring Boot. | Librería | [https://junit.org/junit5/](https://junit.org/junit5/) |
+
+#### Software Deployment
+
+| Producto | Propósito en el proyecto | Tipo | Ruta |
+| :--- | :--- | :--- | :--- |
+| AWS Amplify Hosting | Publicación continua del Landing Page y de la Frontend Web Application a partir de la rama `main` de cada repositorio. | SaaS (Cloud) | [https://aws.amazon.com/amplify/hosting/](https://aws.amazon.com/amplify/hosting/) |
+| EC2 | Publicación temporal del Fake API (json-server) consumido por la primera versión de la Web Application. | SaaS (Cloud) | [https://aws.amazon.com/ec2/](https://aws.amazon.com/ec2/) |
+| AWS EC2 · AWS RDS for MySQL | Infraestructura planificada para la RESTful API y su base de datos a partir del Sprint 3. | SaaS (Cloud) | [https://aws.amazon.com](https://aws.amazon.com) |
+
+#### Software Documentation
+
+| Producto | Propósito en el proyecto | Tipo | Ruta |
+| :--- | :--- | :--- | :--- |
+| GitHub (Trazza-report) | Redacción y control de versiones del Project Report en Markdown. | SaaS | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report) |
+| Microsoft Stream | Publicación de los videos de exposición, entrevistas y navegación por Sprint. | SaaS | [https://www.microsoft.com/microsoft-365/microsoft-stream](https://www.microsoft.com/microsoft-365/microsoft-stream) |
+| OpenAPI (Swagger) | Documentación de los Web Services desde el propio proyecto Spring Boot mediante springdoc-openapi. | Especificación | [https://swagger.io/specification/](https://swagger.io/specification/) |
+
+### 5.1.2. Source Code Management
+
+El equipo utiliza GitHub como plataforma y sistema de control de versiones. Todos los repositorios pertenecen a la organización `NexusLibre-1ASI0729-2620-16692`, y cada producto digital tiene un repositorio independiente, lo que permite que cada uno tenga su propio historial, su propia configuración de despliegue y sus propias versiones.
+
+| Producto | Repositorio | Contenido |
+| :--- | :--- | :--- |
+| Project Report | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-report) | Informe en Markdown, imágenes y diagramas como código (`.puml`). |
+| Landing Page | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-landingPage](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-landingPage) | Sitio estático en HTML5, CSS3 y JavaScript con i18n (EN / ES). |
+| Frontend Web Application | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-webApp](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-webApp) | Aplicación Angular + Angular Material organizada por bounded context (`iam`, `matchmaking`, `execution`, `billing`, `reputation` y `shared`) y Fake API en `server/db.json`. |
+| Web Services (RESTful API) | [https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-WebAPI](https://github.com/NexusLibre-1ASI0729-2620-16692/Trazza-WebAPI) | Proyecto Spring Boot + Spring Data JPA y sus pruebas unitarias y de integración/aceptación. |
+
+#### GitFlow Workflow
+
+El equipo aplica el modelo de ramificación GitFlow propuesto por Vincent Driessen en A successful Git branching model. Este modelo separa el trabajo en progreso de las versiones estables y define el camino que recorre cada cambio hasta llegar a producción.
+
+**Main branches**
+
+| Rama | Propósito | Regla |
+| :--- | :--- | :--- |
+| `main` | Contiene únicamente versiones estables y desplegadas. Cada merge a `main` dispara el despliegue automático en AWS Amplify. | Solo recibe merges desde `release/*` o `hotfix/*`, y cada merge se etiqueta con su versión (`vX.Y.Z`). |
+| `develop` | Rama de integración en la que se consolidan las funcionalidades terminadas antes de un release. | Recibe merges desde `feature/*` mediante Pull Request revisado por al menos un integrante. |
+
+**Supporting branches**
+
+| Tipo | Se crea desde | Se integra en | Convención de nombre | Ejemplos |
+| :--- | :--- | :--- | :--- | :--- |
+| Feature | `develop` | `develop` | `feature/<nombre-del-aspecto>` en kebab-case e inglés: el bounded context en la Web Application o la sección en el Landing Page. | `feature/matchmaking-routing`, `feature/loyalty-reputation`, `feature/hero-section` |
+| Release | `develop` | `main` y `develop` | `release/v<MAJOR>.<MINOR>.<PATCH>` | `release/v1.1.0`, `release/v0.1.0` |
+| Hotfix | `main` | `main` y `develop` | `hotfix/v<MAJOR>.<MINOR>.<PATCH>-<short-description>` | `hotfix/v1.1.1-mobile-menu-overflow` |
+
+En el repositorio del informe se aplica la misma estrategia: cada sección del informe se trabaja en una rama `feature/<número-de-sección>-<nombre>` (por ejemplo `feature/44-web-applications-ux-ui-design` o `feature/51-software-configuration-management`) y se integra a `develop` mediante Pull Request.
+
+#### Semantic Versioning
+
+Los releases de cada producto se nombran con Semantic Versioning 2.0.0 (`MAJOR.MINOR.PATCH`):
+
+* **MAJOR**: cambios incompatibles con la versión anterior (por ejemplo, un cambio en el contrato de la API).
+* **MINOR**: nuevas funcionalidades compatibles con la versión anterior.
+* **PATCH**: corrección de errores que no altera la funcionalidad.
+
+Mientras la Web Application y la RESTful API estén en desarrollo inicial se usa la serie `0.y.z`; la versión `1.0.0` se reserva para el primer release completo con los Web Services integrados.
+
+| Producto | Versión | Entrega | Alcance |
+| :--- | :--- | :--- | :--- |
+| Landing Page | `v1.0.0` | AV1 – Sprint 1 | Primera versión del Landing Page desplegada en AWS Amplify. |
+| Landing Page | `v1.1.0` | TB1 – Sprint 2 | Inglés como idioma por defecto, selector EN / ES funcional, rediseño según el mock-up actualizado y fotografías reales en las secciones para transportistas y comerciantes. |
+| Frontend Web Application | `v0.1.0` | TB1 – Sprint 2 | Primera versión desplegada: Sign up / Sign in, dashboards por rol, rutas de retorno, solicitudes de flete, vehículos e historial de envíos sobre el Fake API. |
+| RESTful API | `v0.1.0` | AV2 – Sprint 3 | Primera versión de los Web Services documentados con OpenAPI. |
+
+#### Conventional Commits
+
+Los mensajes de commit siguen la especificación Conventional Commits 1.0.0, con el mensaje redactado en inglés y en modo imperativo:
+
+```text
+<type>(<optional scope>): <short description>
+
+<optional body: qué cambió y por qué>
+
+<optional footer: Refs #issue / BREAKING CHANGE>
+```
+
+| Tipo | Uso |
+| :--- | :--- |
+| `feat` | Nueva funcionalidad (User Story o task). |
+| `fix` | Corrección de un error. |
+| `docs` | Cambios en el informe o en la documentación. |
+| `style` | Cambios de formato que no afectan la lógica. |
+| `refactor` | Mejora interna del código sin cambiar su comportamiento. |
+| `test` | Creación o modificación de pruebas. |
+| `chore` | Configuración, dependencias o tareas de mantenimiento. |
+
+Ejemplos tomados del historial del proyecto:
+
+* `feat(matchmaking): add route-matching domain service` (Trazza-webApp)
+* `test(matchmaking): add route-matching service unit tests` (Trazza-webApp)
+* `feat(i18n): add language engine and base translations` (Trazza-landingPage)
+* `style(header): add responsive navigation styles` (Trazza-landingPage)
+
+### 5.1.3. Source Code Style Guide & Conventions
+
+En todos los productos de la solución se utiliza el **inglés** para nombrar archivos, carpetas, variables, funciones, clases, componentes, tablas, columnas, endpoints y mensajes de commit. Los textos que ve el usuario se manejan con i18n (en_US por defecto y es_419). A continuación se indican las guías adoptadas por lenguaje.
+
+**HTML5**
+
+Referencias: [W3Schools HTML Style Guide and Coding Conventions](https://www.w3schools.com/html/html5_syntax.asp) y [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html).
+
+* Declarar `<!DOCTYPE html>` y el atributo `lang` en la etiqueta `<html>` (`lang="en"` por defecto).
+* Elementos y atributos en minúsculas, valores de atributos entre comillas dobles e indentación de 2 espacios.
+* Uso de etiquetas semánticas (`header`, `nav`, `main`, `section`, `footer`).
+* Todas las imágenes incluyen `alt`, y los controles sin texto visible incluyen `aria-label` (a11y).
+* Los textos traducibles se marcan con `data-i18n`, por ejemplo `<a href="#plans" data-i18n="nav.plans">Plans</a>`.
+
+**CSS3**
+
+Referencias: [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html).
+
+* Clases e IDs en kebab-case y con nombres que describen su función (`.split-media`, `#how-it-works`).
+* Colores, tipografía y espaciados definidos como variables en `:root` (por ejemplo `--color-primary: #0037B0`).
+* Sin estilos en línea; enfoque mobile first con media queries para tablet y desktop.
+
+**JavaScript**
+
+Referencias: [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html), [MDN JavaScript guidelines](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript) y [W3Schools JavaScript Style Guide](https://www.w3schools.com/js/js_conventions.asp).
+
+* `const` por defecto, `let` solo cuando la variable se reasigna; no se usa `var`.
+* camelCase para variables y funciones (`applyLanguage`, `returnRoutes`), PascalCase para clases y UPPER_SNAKE_CASE para constantes (`STORAGE_KEY`).
+* Punto y coma al final de cada sentencia, comillas simples y funciones flecha en callbacks.
+* Uso de `async/await` para operaciones asíncronas.
+
+**Angular Framework y TypeScript**
+
+Referencias: [Angular coding style guide](https://angular.dev/style-guide) y [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html).
+
+* Standalone components con clases en PascalCase y archivos en kebab-case (`freight-request-form.ts`, `freight-request-form.html`, `freight-request-form.css`).
+* Estructura de carpetas por bounded context: `src/app/iam`, `src/app/matchmaking`, `src/app/execution`, `src/app/billing`, `src/app/reputation` y `src/app/shared`, y dentro de cada uno `domain/model`, `application`, `infrastructure` y `presentation`.
+* Sufijos según el rol del archivo: `*.entity.ts`, `*.value-object.ts`, `*.store.ts`, `*-api.ts`, `*-api-endpoint.ts`, `*-assembler.ts` y `*.routes.ts`.
+* Estado por bounded context con Signals e inyección de dependencias con `inject()`; rutas con lazy loading protegidas con `iamGuard`.
+* Componentes de Angular Material para la UI; textos de la interfaz siempre a través de ngx-translate (`public/i18n/en.json` y `es.json`).
+
+**Java y Spring Boot**
+
+Referencias: [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) y [Spring Boot Features](https://docs.spring.io/spring-boot/reference/features/index.html).
+
+* PascalCase para clases e interfaces (`ReturnRoute`, `ReturnRouteRepository`); camelCase para métodos, variables y parámetros (`findByCarrierId`); UPPER_SNAKE_CASE para constantes.
+* Paquetes en minúsculas organizados por bounded context, con capas `domain`, `application`, `infrastructure` e `interfaces` (controllers REST en plural, por ejemplo `/api/v1/return-routes`).
+* Una clase por archivo e inyección de dependencias por constructor.
+* Persistencia con Spring Data JPA y endpoints documentados con OpenAPI mediante springdoc-openapi (Swagger UI).
+
+**Gherkin**
+
+Referencia: [Gherkin Conventions for Readable Specifications](https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/).
+
+* Palabras clave `Feature`, `Scenario`, `Given`, `When`, `Then`, `And`.
+* Un solo `When` por escenario y escenarios con nombres que describen el comportamiento esperado.
+* Uso de `Examples` en tablas cuando un escenario se repite con distintos datos.
+
+### 5.1.4. Software Deployment Configuration
+
+La solución Trazza se compone de tres productos que se despliegan de forma independiente. La siguiente tabla resume la configuración vigente al Sprint 2.
+
+| Producto | Repositorio / rama | Tecnología | Servicio de despliegue | URL pública |
+| :--- | :--- | :--- | :--- | :--- |
+| Landing Page | `Trazza-landingPage` / `main` | HTML5, CSS3, JavaScript | AWS Amplify Hosting | [https://main.dop9j8vefsnfj.amplifyapp.com](https://main.dop9j8vefsnfj.amplifyapp.com) |
+| Frontend Web Application | `Trazza-webApp` / `main` | Angular, Angular Material, TypeScript, ngx-translate | AWS Amplify Hosting | [https://main.d11tospvoprjej.amplifyapp.com](https://main.d11tospvoprjej.amplifyapp.com) |
+| Fake API (temporal) | `Trazza-webApp` / `main` (carpeta `server`) | json-server | Render (Web Service) | Pendiente |
+| RESTful API (Sprint 3) | `Trazza-WebAPI` / `main` | Spring Boot, Java, Spring Data JPA | AWS EC2 | Pendiente |
+| Base de datos (Sprint 3) | — | MySQL | AWS RDS for MySQL | Pendiente |
+
+#### Landing Page (AWS Amplify Hosting)
+
+1. Ingresar a la consola de AWS Amplify y seleccionar **Create new app → GitHub**.
+2. Autorizar a AWS Amplify en la organización `NexusLibre-1ASI0729-2620-16692` y seleccionar el repositorio `Trazza-landingPage` y la rama `main`.
+3. Al ser un sitio estático, no se configura comando de build y el directorio de salida es la raíz del repositorio (`/`).
+4. Guardar y desplegar. Amplify publica el sitio en un dominio `*.amplifyapp.com` con HTTPS.
+5. Cada merge en `main` dispara automáticamente un nuevo despliegue (despliegue continuo).
+
+#### Frontend Web Application (AWS Amplify Hosting)
+
+1. En AWS Amplify, crear una nueva app conectada al repositorio `Trazza-webApp`, rama `main`.
+2. Configurar el build en `amplify.yml`:
+
+```yaml
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: dist/trazza-web-application/browser
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+```
+
+3. Configurar en `src/environments/environment.ts` la propiedad `platformProviderApiBaseUrl` con la URL pública del Fake API (en el Sprint 3 se reemplazará por la URL de la RESTful API).
+4. Agregar la regla Rewrites and redirects para que Angular Router funcione al recargar cualquier ruta:
+
+| Source address | Target address | Type |
+| :--- | :--- | :--- |
+| `</^[^.]+$\|\.(?!(css\|gif\|ico\|jpg\|js\|png\|txt\|svg\|woff\|woff2\|ttf\|map\|json\|webp)$)([^.]+$)/>` | `/index.html` | `200 (Rewrite)` |
+
+5. Guardar y desplegar. Cada merge en `main` genera un nuevo build y despliegue.
+
+#### Fake API (Render)
+
+1. Crear un **Web Service** en Render conectado al repositorio `Trazza-webApp`.
+2. Configurar Root Directory `server`, Build Command `npm install` y Start Command `npx json-server db.json --routes routes.json --host 0.0.0.0 --port $PORT` (el archivo `routes.json` agrega el prefijo `/api/v1`).
+3. Copiar la URL pública generada y registrarla en la propiedad `platformProviderApiBaseUrl` de `src/environments/environment.ts`.
+
+#### RESTful API y base de datos (planificado para el Sprint 3)
+
+1. Aprovisionar una instancia de AWS RDS for MySQL y restringir su Security Group para aceptar conexiones solo desde la instancia EC2 de la API.
+2. Empaquetar el proyecto Spring Boot con `./mvnw clean package` y ejecutar el `.jar` generado (`java -jar target/*.jar`) en una instancia AWS EC2 detrás de Nginx como proxy inverso.
+3. Configurar como variables de entorno `SPRING_PROFILES_ACTIVE=prod`, la conexión a MySQL (`SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME` y `SPRING_DATASOURCE_PASSWORD`) y la clave para la generación de tokens JWT, sin exponer credenciales en el repositorio.
+4. Habilitar Swagger UI (springdoc-openapi) en `/swagger-ui/index.html` como evidencia de la documentación OpenAPI.
+
+## 5.2. Landing Page, Services & Applications Implementation
+
+En esta sección se explica y evidencia el proceso de implementación, pruebas, documentación y despliegue del Landing Page, los Web Services y la Frontend Web Application de Trazza, organizado por Sprint. En el Sprint 1 el equipo implementó y desplegó la primera versión del Landing Page. En el Sprint 2 se publicó una nueva versión del Landing Page y se planificó la primera versión de la Web Application a partir de los diseños de la sección 4.4.
+
+### 5.2.1. Sprint 1
+
+En esta sección se registra el avance en producto y en trabajo colaborativo del Sprint 1, cuyo alcance fue la primera versión del Landing Page, primer punto de contacto de Trazza con transportistas y comerciantes MYPE.
+
+#### 5.2.1.1. Sprint Planning 1
+
+En el Sprint Planning 1 el equipo definió el objetivo del Sprint y seleccionó las User Stories del Landing Page con mayor prioridad en el Product Backlog.
+
+| Sprint # | Sprint 1 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | 2026-09-18 |
+| Time | 10:00 AM |
+| Location | Reunión virtual vía Microsoft Teams |
+| Prepared By | Peñaranda Caldas, Gabriel Augusto |
+| Attendees (to planning meeting) | Checalla Apaza, Emanuel Renato / Lozano Quispe, Fabricio Jofred / Pezo Castilla, Maria Jose / Peñaranda Caldas, Gabriel Augusto / Vite Celis, Rodrigo Matias |
+| Sprint 0 Review Summary | N/A. Es el primer Sprint del proyecto. |
+| Sprint 0 Retrospective Summary | N/A. Es el primer Sprint del proyecto. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | **Nuestro enfoque está en** publicar la primera versión del Landing Page de Trazza, que presente la propuesta de valor para transportistas con viajes de retorno vacíos y para comerciantes MYPE que necesitan enviar mercadería por Lima. **Creemos que esto entrega** una primera razón clara para registrarse **a** transportistas independientes y comerciantes MYPE de Lima. **Esto se confirmará cuando** un visitante pueda abrir el Landing Page desde una URL pública, identificar la propuesta para su segmento, leer los testimonios y llegar al formulario de registro de su rol. |
+| Sprint 1 Velocity | 5 Story Points |
+| Sum of Story Points | 5 Story Points (US04: 2, US05: 2, US25: 1) |
+
+#### 5.2.1.2. Aspect Leaders and Collaborators
+
+Los aspectos del Sprint 1 son la implementación del Landing Page, el diseño de sus wireframes y mock-ups (sección 4.3) y su despliegue. Los líderes se asignaron según la participación registrada en los repositorios.
+
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page Implementation (L/C) | Landing Page UI Design (L/C) | Landing Page Deployment (L/C) |
+| :--- | :--- | :---: | :---: | :---: |
+| Checalla Apaza, Emanuel Renato | Emanuelca135 | C | C | L |
+| Lozano Quispe, Fabricio Jofred | FabricioZz15 | C | L | C |
+| Pezo Castilla, Maria Jose | MariaJosePezo | C | L | C |
+| Peñaranda Caldas, Gabriel Augusto | gapc2124 | L | C | C |
+| Vite Celis, Rodrigo Matias | rodriznnn | C | C | C |
+
+#### 5.2.1.3. Sprint Backlog 1
+
+El objetivo del Sprint 1 fue publicar la primera versión del Landing Page. Las User Stories se descompusieron en tareas de 4 a 8 horas.
 
 
+**URL público del Board:** [https://trazza.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog](https://trazza.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog)
 
+| Sprint # | Sprint 1 | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **User Story** | | **Work-Item / Task** | | | | | |
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US04 | Landing Page: Propuesta para Transportistas | T01 | Estructura base del repositorio | Crear el repositorio `Trazza-landingPage` y la estructura inicial del sitio. | 4 | Pezo Castilla, Maria Jose | Done |
+| US04 | Landing Page: Propuesta para Transportistas | T02 | Header, navegación y Hero | Implementar la barra de navegación responsive y la sección Hero con los botones por rol. | 6 | Peñaranda Caldas, Gabriel Augusto | Done |
+| US04 | Landing Page: Propuesta para Transportistas | T03 | Sección para transportistas | Maquetar los beneficios para el transportista y el llamado a registrarse. | 4 | Peñaranda Caldas, Gabriel Augusto | Done |
+| US05 | Landing Page: Propuesta para Emprendedores | T04 | Sección para comerciantes y comparativa | Maquetar los beneficios para el comerciante MYPE y la comparativa frente al flete tradicional. | 5 | Peñaranda Caldas, Gabriel Augusto | Done |
+| US25 | Landing Page: Testimonios de Éxito | T05 | Testimonios y footer | Implementar las tarjetas de testimonios, la sección de contacto y el footer. | 4 | Peñaranda Caldas, Gabriel Augusto | Done |
+| — | Constraint: despliegue | T06 | Despliegue en AWS Amplify | Conectar el repositorio con AWS Amplify, publicar la rama `main` y validar la URL pública. | 4 | Checalla Apaza, Emanuel Renato | Done |
+
+#### 5.2.1.4. Development Evidence for Sprint Review
+
+En el Sprint 1 se creó el repositorio del Landing Page y se implementó su primera versión, que luego se publicó en AWS Amplify. En paralelo se documentaron en el informe el diseño del Landing Page y la configuración del proyecto. La siguiente tabla muestra los commits relacionados con la implementación.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| NexusLibre-1ASI0729-2620-16692/Trazza-landingPage | main | f5ef775 | first commit | - | 2026-09-11 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-landingPage | main | 27773c4 | feat: creando nuevo repositorio debido a los errores del anterior | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/43-landing-page-ui-design | 11323a7 | docs(landing): add landing wireframes images | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/43-landing-page-ui-design | be862b6 | docs(landing): add landing mock ups desk images | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/43-landing-page-ui-design | a05df02 | docs(chapter4): add landing page ui design desktop wireframes and mockups descriptions | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/51-software-configuration-management | 78675b9 | doc(5.1): add complete content for software configuration management | - | 2026-09-18 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/52-landing-page-services-applications-implementation | 84eb2d8 | doc(5.2): populate sprint 1 implementation and evidence sections | - | 2026-09-18 |
+
+#### 5.2.1.5. Execution Evidence for Sprint Review
+
+Al cierre del Sprint 1, el Landing Page quedó publicado en una URL pública. Presentaba la propuesta de valor para ambos segmentos, la comparativa frente al flete tradicional, los testimonios y los accesos al registro por rol.
+
+<div align="center">
+  <img src="../assets/images/landingimplementada1.jpeg" alt="Landing Page v1 - Hero section" width="800">
+  <br><br>
+  <img src="../assets/images/landingimplementada2.jpeg" alt="Landing Page v1 - Value proposition sections" width="800">
+  <br><br>
+  <img src="../assets/images/landingimplementada3.jpeg" alt="Landing Page v1 - Testimonials and footer" width="800">
+</div>
+
+**Video de navegación del Sprint 1:** [upc-pre-202620-1asi0730-8084-StackRoot-productnavigation-sprint-1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414356_upc_edu_pe/IQAHwNmBh-BrSIywebxTh1XRAXSQ67CxwXjsw4F17WnJ3nQ?e=dc5eL3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+El alcance del Sprint 1 se limitó al Landing Page, que es un sitio estático. Por ello, en este Sprint no se implementaron ni documentaron endpoints con OpenAPI. Los Web Services de Trazza se implementarán en Spring Boot en un Sprint posterior.
+
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+En el Sprint 1 se creó la aplicación en AWS Amplify Hosting y se conectó con la rama `main` del repositorio `Trazza-landingPage`, siguiendo los pasos descritos en la sección 5.1.4. Al ser un sitio estático, no requiere comando de build. Desde entonces, cada cambio integrado en `main` se publica automáticamente.
+
+**URL del Landing Page:** [https://main.dop9j8vefsnfj.amplifyapp.com](https://main.dop9j8vefsnfj.amplifyapp.com)
+
+<div align="center">
+  <img src="../assets/images/trazzalandingpagedesplegada.jpeg" alt="Landing Page v1 deployed on AWS Amplify" width="800">
+</div>
+#### 5.2.1.8. Team Collaboration Insights during Sprint
+
+En el Sprint 1 el equipo trabajó en dos repositorios. En `Trazza-landingPage` se registraron 2 commits: Pezo Castilla, Maria Jose (estructura inicial) y Peñaranda Caldas, Gabriel Augusto (primera versión completa), ambos directamente en `main`. En `Trazza-report` cada sección del informe se trabajó en su rama `feature/*` y se integró a `develop` mediante Pull Requests, con commits de los cinco integrantes.
+
+Los gráficos de Contributors muestran las contribuciones semanales de cada integrante. Las barras de las semanas del 7 y 14 de septiembre corresponden al Sprint 1.
+
+<div align="center">
+  <img src="../assets/images/chapter5/insights-landing-contributors.png" alt="GitHub Insights - Trazza-landingPage contributors" width="800">
+  <br><br>
+  <img src="../assets/images/chapter5/insights-report-contributors.png" alt="GitHub Insights - Trazza-report contributors" width="800">
+  <br><br>
+  <img src="../assets/images/chapter5/sprint1-commits-landing.png" alt="Trazza-landingPage commits during Sprint 1" width="800">
+  <br><br>
+  <img src="../assets/images/chapter5/sprint1-commits-report.png" alt="Trazza-report commits during Sprint 1" width="800">
+</div>
+
+### 5.2.2. Sprint 2
+
+En esta sección se registra el avance en producto y en trabajo colaborativo correspondiente al Sprint 2.
+
+#### 5.2.2.1. Sprint Planning 2
+
+En el Sprint Planning 2 el equipo definió el objetivo del Sprint y seleccionó las User Stories correspondientes de acuerdo con su prioridad dentro del Product Backlog.
+
+| Sprint # | Sprint 2 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date |05/10/2026 |
+| Time | 10:00 p.m |
+| Location | Modalidad Remota a través de la plataforma Discord |
+| Prepared By |  Peñaranda Caldas, Gabriel Augusto |
+| Attendees (to planning meeting) | Checalla Apaza, Emanuel Renato / Lozano Quispe, Fabricio Jofred / Pezo Castilla, Maria Jose / Peñaranda Caldas, Gabriel Augusto / Vite Celis, Rodrigo Matias |
+| Sprint 1 Review Summary | En este sprint, el equipo avanzó en la primera versión funcional de Trazza, desarrollando la Landing Page y las funcionalidades iniciales de registro y autenticación. También se establecieron las bases para la integración y despliegue de los componentes del sistema. Como mejora, identificamos la necesidad de seguir refinando la experiencia de usuario y fortalecer la integración entre los diferentes módulos. |
+| Sprint 1 Retrospective Summary | Durante este sprint, el equipo mantuvo una colaboración constante mediante la distribución de responsabilidades y el uso de GitHub para integrar los avances. Sin embargo, se identificaron oportunidades de mejora en la coordinación de tareas, comunicación e integración de cambios entre ramas. Para el siguiente sprint, buscaremos mejorar la organización del trabajo y mantener una comunicación más constante entre los integrantes. |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | **Nuestro enfoque está en** desplegar la primera versión funcional del frontend de la aplicación web de Trazza. **Creemos que esto entrega** una experiencia de navegación interactiva y acceso preliminar a la plataforma **a** nuestros transportistas y emprendedores MYPE. **Esto se confirmará cuando** los usuarios puedan ingresar al entorno web alojado en la nube y logren navegar correctamente por las principales vistas implementadas sin errores. |
+| Sprint 2 Velocity |30 Story Points. |
+| Sum of Story Points | 30 Story Points. |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+En esta sección se presentan los líderes y colaboradores responsables de los principales aspectos desarrollados durante el Sprint 2.
+
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page Implementation (L/C) | Landing Page UI Design (L/C) | Landing Page Deployment (L/C) |
+| :--- | :--- | :---: | :---: | :---: |
+| Checalla Apaza, Emanuel Renato | Emanuelca135 | C | C | C |
+| Lozano Quispe, Fabricio Jofred | FabricioZz15 | C | L | C |
+| Pezo Castilla, Maria Jose | MariaJosePezo | L | C | C |
+| Peñaranda Caldas, Gabriel Augusto | gapc2124 | C | C | C |
+| Vite Celis, Rodrigo Matias | rodriznnn | C | C | C |
+
+#### 5.2.2.3. Sprint Backlog 2
+
+En esta sección se detallan las User Stories y las tareas seleccionadas para el Sprint 2, cuyo foco fue desplegar la primera versión funcional de la Web Application (Frontend) e implementar las vistas principales de registro, inicio de sesión y gestión de solicitudes básicas.
+
+**URL público del Board:** [https://trazza.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiODY4YWQ1NTBiM2VkNGYzOTkwZmMxMjY1MWE1MGEwYTciLCJwIjoiaiJ9](https://trazza.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiODY4YWQ1NTBiM2VkNGYzOTkwZmMxMjY1MWE1MGEwYTciLCJwIjoiaiJ9)
+
+| Sprint # | Sprint 2 | | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **User Story** | | **Work-Item / Task** | | | | | |
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US01 | Registro de Transportista | T07 | UI Formulario de Registro Transportista | Implementar la vista del formulario de registro y validaciones para el transportista. | 6 | Pezo Castilla, Maria Jose | Done |
+| US02 | Registro de Emprendedor | T08 | UI Formulario de Registro Emprendedor | Implementar la vista del formulario de registro y validaciones para el emprendedor. | 6 | Checalla Apaza, Emanuel Renato | Done |
+| US03 | Inicio de Sesión de Usuario | T09 | Pantalla de Login (Web App) | Desarrollar la vista de inicio de sesión con enrutamiento hacia el dashboard respectivo. | 5 | Peñaranda Caldas, Gabriel Augusto | Done |
+| US08 | Publicación de Ruta de Retorno | T10 | Vista Dashboard Transportista | Diseñar la interfaz principal del transportista con el botón y modal para publicar rutas. | 8 | Lozano Quispe, Fabricio Jofred | Done |
+| US09 | Solicitud de Envío de Mercadería | T11 | Vista Dashboard Emprendedor | Diseñar la interfaz principal del emprendedor para solicitar un envío (formulario de carga). | 8 | Vite Celis, Rodrigo Matias | Done |
+| — | Constraint: Configuración | T12 | Estructura Base Web App | Configurar el repositorio del Frontend (Angular/React), routing base y dependencias de diseño. | 4 | Peñaranda Caldas, Gabriel Augusto | Done |
+| — | Constraint: Despliegue | T13 | Despliegue Frontend en Cloud | Desplegar la aplicación web funcional conectada a un entorno de prueba público. | 4 | Pezo Castilla, Maria Jose | Done |
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+En esta sección se presentan las evidencias de desarrollo correspondientes al Sprint 2. La siguiente tabla registra los principales commits realizados en los repositorios del proyecto, destacando la implementación del Frontend y la documentación del informe.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | main | 8a1f2c3 | feat: init angular project structure | - | 2026-10-02 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | develop | 3b9c8d1 | feat: implement register and login forms | - | 2026-10-03 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-webApp | develop | d4e7a5b | feat: create base dashboard components | - | 2026-10-04 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | feature/cap5-sprint2 | c710b44 | docs: add part of sprint 2 documentation | - | 2026-10-05 |
+| NexusLibre-1ASI0729-2620-16692/Trazza-report | develop | fde8d18 | Merge branch 'feature/chepter4-Diagramsv2' into develop | - | 2026-10-05 |
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+En esta sección se presentan las evidencias de ejecución de las funcionalidades implementadas durante el Sprint 2.
+
+| Evidence | Description | Related User Story | Status |
+| :--- | :--- | :--- | :--- |
+| UI Component | Landing Page: Propuesta para Transportistas | US04 | Finalizado |
+| UI Component | Landing Page: Propuesta para Emprendedores | US05 | Finalizado |
+| UI Component | Landing Page: Testimonios de Éxito | US25 | Finalizado |
+
+<div align="center">
+  <img src="../assets/images/chapter5/evidencia-sprint2.jpeg" alt="Evidencia de ejecución Sprint 2 - Vista 1" width="800">
+  <br><br>
+  <img src="../assets/images/chapter5/evidencia-sprint2-2.jpeg" alt="Evidencia de ejecución Sprint 2 - Vista 2" width="800">
+  <br><br>
+  <img src="../assets/images/chapter5/evidencia-sprint2-3.jpeg" alt="Evidencia de ejecución Sprint 2 - Vista 3" width="800">
+</div>
+
+**Video de navegación del Sprint 2:** [upc-pre-202620-1asi0729-16692-NexusLibre-keynote-tb1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210836_upc_edu_pe/IQB4iIieEXLgTY0NDGDKdOCWAffPuq2jSt2JscaEYz-EMaQ?e=R1rXS0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Dado que el objetivo principal del Sprint 2 se enfocó en el diseño, desarrollo y despliegue del **Frontend Web Application**, la implementación de la API REST y su documentación (Swagger/OpenAPI) se encuentra programada para los siguientes Sprints de integración.
+
+<div align="center">
+  <!-- Evidencias de Swagger se agregarán en el Sprint 3 -->
+</div>
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+En esta sección se presentan las evidencias relacionadas con el despliegue del software desarrollado durante el Sprint 2.
+
+| Software Component | Deployment Platform | Repository / Branch | Deployment URL | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| Frontend Web App | AWS Amplify | Trazza-webApp / main | https://main.d11tospvoprjej.amplifyapp.com | Active |
+| Landing Page v2 | AWS Amplify | Trazza-landingPage / main | https://main.dop9j8vefsnfj.amplifyapp.com | Active |
+
+**URL de despliegue (Web App):** https://main.d11tospvoprjej.amplifyapp.com
+
+<div align="center">
+  <img src="../assets/images/chapter5/sprint2-softwaredeploymentconfiguration.jpeg" alt="Sprint 2 - Software Deployment Evidence" width="800">
+</div>
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+En esta sección se presentan las evidencias de colaboración del equipo durante el Sprint 2, considerando las contribuciones realizadas por cada integrante en los repositorios del proyecto.
+
+| Team Member | GitHub Username | Repository | Commits | Pull Requests | Main Contribution |
+| :--- | :--- | :--- | :---: | :---: | :--- |
+| Checalla Apaza, Emanuel Renato | Emanuelca135 | Trazza-webApp / Trazza-report | 8 | 2 | Desarrollo del registro de Emprendedor y documentación. |
+| Lozano Quispe, Fabricio Jofred | FabricioZz15 | Trazza-webApp / Trazza-report | 7 | 2 | Interfaz del Dashboard de Transportista y diseño UI. |
+| Pezo Castilla, Maria Jose | Grini913 | Trazza-webApp / Trazza-report | 10 | 3 | Despliegue, estructura base, y Registro de Transportista. |
+| Peñaranda Caldas, Gabriel Augusto | gapc2124 | Trazza-webApp / Trazza-report | 12 | 3 | Login, ruteo de la aplicación, y resolución de conflictos. |
+| Vite Celis, Rodrigo Matias | rodriznnn | Trazza-webApp / Trazza-report | 7 | 2 | Interfaz del Dashboard de Emprendedor (solicitud de carga). |
+
+Los gráficos de Contributors muestran las contribuciones realizadas por cada integrante durante el Sprint 2.
+
+<div align="center">
+  <img src="../assets/images/chapter5/github-sprint2-1.jpeg" alt="GitHub Collaboration Sprint 2 - Insights 1" width="800">
+  <br><br>
+  <img src="../assets/images/chapter5/github-sprint2-2.jpeg" alt="GitHub Collaboration Sprint 2 - Insights 2" width="800">
+  <br><br>
+  <img src="../assets/images/chapter5/github-sprint2-3.jpeg" alt="GitHub Collaboration Sprint 2 - Insights 3" width="800">
+</div>
+
+# Conclusiones y Recomendaciones
+
+## Conclusiones
+
+* A través del uso de la metodología Lean UX y el desarrollo del Lean UX Canvas, el equipo logró centrar el proceso de diseño en las necesidades reales de los transportistas independientes y emprendedores Pymes, validando que existe una alta demanda por la optimización de rutas y la reducción de fletes vacíos en Lima.
+* El proceso de Event Storming permitió al equipo tener una visión integral del flujo del negocio, facilitando la identificación precisa de los *Bounded Contexts* necesarios para la propuesta de Domain-Driven Design de la solución Trazza.
+* El diseño e implementación de las arquitecturas (C4 Model) estableció una base tecnológica robusta y escalable sobre la nube (AWS), asegurando que tanto la plataforma web como el motor de *matchmaking* logístico interactúen eficientemente mediante APIs REST.
+* La planificación mediante metodologías ágiles (Scrum) y el control de versiones (GitFlow) fueron vitales para cumplir a tiempo con las entregas de cada Sprint, fomentando la colaboración continua y la integración constante de los módulos de la Landing Page y Web Applications.
+
+## Recomendaciones
+
+* Se recomienda para fases futuras profundizar en la integración del monitoreo por hardware (IoT/GPS) directamente en los vehículos, con el objetivo de elevar la trazabilidad de los fletes e incrementar la confianza de los emprendedores.
+* Se sugiere realizar más pruebas de usabilidad y A/B testing con la primera versión funcional de la plataforma para refinar aún más el flujo de "Matchmaking" e incorporar métricas directas del usuario final.
+* Mantener actualizadas las convenciones de *Clean Architecture* en las siguientes iteraciones de desarrollo del backend para evitar acoplamiento a medida que el negocio requiera escalar a rutas interprovinciales.
+
+# Bibliografía
+
+* Amazon Web Services. (s. f.). *AWS Amplify Hosting user guide*. https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html
+* Atlassian. (s. f.). *Gitflow workflow*. https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+* Brown, S. (s. f.). *The C4 model for visualising software architecture*. https://c4model.com/
+* Cohn, M. (2004). *User stories applied: For agile software development*. Addison-Wesley Professional.
+* Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/en/v1.0.0/
+* Driessen, V. (2010). *A successful Git branching model*. https://nvie.com/posts/a-successful-git-branching-model/
+* Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley Professional.
+* Google. (s. f.). *Angular coding style guide*. https://angular.dev/style-guide
+* Google. (s. f.). *Google HTML/CSS style guide*. https://google.github.io/styleguide/htmlcssguide.html
+* Google. (s. f.). *Google Java style guide*. https://google.github.io/styleguide/javaguide.html
+* Google. (s. f.). *Google JavaScript style guide*. https://google.github.io/styleguide/jsguide.html
+* Google. (s. f.). *Google TypeScript style guide*. https://google.github.io/styleguide/tsguide.html
+* Google. (s. f.). *Material Design 3*. https://m3.material.io/
+* Gothelf, J., & Seiden, J. (2021). *Lean UX: Designing great products with agile teams* (3.ª ed.). O'Reilly Media.
+* Mozilla. (s. f.). *Guidelines for writing JavaScript code examples*. MDN Web Docs. https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
+* Preston-Werner, T. (s. f.). *Semantic Versioning 2.0.0*. https://semver.org/
+* Schwaber, K., & Sutherland, J. (2020). *The Scrum guide*. https://scrumguides.org/scrum-guide.html
+* Scrum.org. (s. f.). *Sprint goal template*. https://www.scrum.org/resources/blog/sprint-goal-template
+* SpecFlow. (s. f.). *Gherkin conventions for readable specifications*. https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/
+* Spring. (s. f.). *Spring Boot Features*. https://docs.spring.io/spring-boot/reference/features/index.html
+* W3C. (2023). *WAI-ARIA authoring practices guide*. https://www.w3.org/WAI/ARIA/apg/
+* W3Schools. (s. f.). *HTML style guide and coding conventions*. https://www.w3schools.com/html/html5_syntax.asp
+* W3Schools. (s. f.). *JavaScript style guide*. https://www.w3schools.com/js/js_conventions.asp
+
+# Anexos
+
+## Anexo A. Estructura para la sección Objetivo del Estudiante (Student Outcome)
+
+Esta sección ya fue abordada y completada detalladamente en la sección introductoria (ver `front-matter/05-student-outcome.md`).
+
+<!-- Salto de Pagina -->
+<div style="page-break-after: always;"></div>
+
+
+## Anexo B. Estructura para el Informe de participación
+
+El *Final Project Individual Member Performance Report (by Team Leader)* será adjuntado como documento Word independiente en las entregas oficiales correspondientes por el líder del equipo, siguiendo el formato establecido.
+
+<!-- Salto de Pagina -->
+<div style="page-break-after: always;"></div>
+
+
+## Anexo C. Videos de Exposiciones
+
+A continuación, se listan progresivamente los enlaces a las exposiciones correspondientes a cada hito de evaluación del proyecto.
+
+| Hito | Título del Video | Enlace Microsoft Stream |
+| :--- | :--- | :--- |
+| **AV1** | Exposición Sprint Review AV1 | https://tinyurl.com/mrxzz2yd |
+| **TB1** | Exposición Sprint Review TB1 | [upc-pre-202620-1asi0729-16692-NexusLibre-keynote-tb1.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202210836_upc_edu_pe/IQB4iIieEXLgTY0NDGDKdOCWAffPuq2jSt2JscaEYz-EMaQ?e=R1rXS0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+
+
+<!-- Salto de Pagina -->
+<div style="page-break-after: always;"></div>
+
+## Anexo D. Formato para Evaluación de User Experience según Heurísticas
+
+Las sesiones de validación aplicaron las tablas de heurísticas solicitadas, evidenciando las violaciones de principios, severidad (del 1 al 4) y las recomendaciones en la sección de Validation Interviews de este reporte (Capítulo 5).
+
+<!-- Salto de Pagina -->
+<div style="page-break-after: always;"></div>
+
+
+## Anexo E. Errores típicos en la traducción y uso de términos para Ingeniería de Software
+
+Se ha prestado atención minuciosa para evitar la transliteración y uso de Spanglish en términos técnicos como *deploy* o *test*, manteniendo el lenguaje oficial y la nomenclatura técnica estandarizada.
+
+
+<!-- Salto de Pagina -->
+<div style="page-break-after: always;"></div>
+
+
+# Anexo F. Event Storming Completo (Big Picture + Design Level)
+
+Este anexo contiene el tablero completo de Event Storming realizado para el proyecto Trazza, que incluye tanto el **Big Picture Event Storming** (sección 2.4) como el **Design-Level Event Storming** (sección 4.6.1).
+
+**Enlace al tablero interactivo en Figma:**  https://www.figma.com/board/WxMU6oKF4Vo3Z5UQ5XZrkm/Event-Storming?node-id=0-1&t=aqD0ryVwMf3WdoTD-1
+
+> El tablero permite explorar de forma interactiva todos los eventos, comandos, actores, políticas, agregados y bounded contexts identificados durante los talleres.
+
+<!-- Salto de Pagina -->
+<div style="page-break-after: always;"></div>
+
+
+## Anexo G. Diagrama de Base de Datos Completo (ERD)
+
+Este anexo contiene el diagrama entidad-relación completo de la base de datos de Trazza, organizado según los Bounded Contexts definidos mediante Domain-Driven Design.
+
+**Enlace al diagrama interactivo:**  https://dbdiagram.io/d/DBD-Trazza-6ac45a0d0f25a52d019c48b2
+
+> El diagrama permite explorar de forma interactiva todas las tablas, relaciones, claves primarias y foráneas de los Bounded Contexts: IAM & Profiles, Matchmaking & Routing, Service Execution & Monitoring, Payment & Billing y Loyalty & Reputation.
