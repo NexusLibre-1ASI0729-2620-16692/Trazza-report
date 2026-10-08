@@ -223,10 +223,10 @@ La solución Trazza se compone de tres productos que se despliegan de forma inde
 
 | Producto | Repositorio / rama | Tecnología | Servicio de despliegue | URL pública |
 | :--- | :--- | :--- | :--- | :--- |
-| Landing Page | `Trazza-landingPage` / `main` | HTML5, CSS3, JavaScript | AWS Amplify Hosting | `[URL de Amplify del Landing Page]` |
-| Frontend Web Application | `Trazza-webApp` / `main` | Angular, Angular Material, TypeScript, ngx-translate | AWS Amplify Hosting | `[URL de Amplify de la Web Application]` |
-| Fake API (temporal) | `Trazza-webApp` / `main` (carpeta `server`) | json-server | Render (Web Service) | `[URL de Render del Fake API]` |
-| RESTful API (Sprint 3) | `Trazza-webServices` / `main` | Spring Boot, Java, Spring Data JPA | AWS EC2 | Pendiente |
+| Landing Page | `Trazza-landingPage` / `main` | HTML5, CSS3, JavaScript | AWS Amplify Hosting | [https://main.dop9j8vefsnfj.amplifyapp.com](https://main.dop9j8vefsnfj.amplifyapp.com) |
+| Frontend Web Application | `Trazza-webApp` / `main` | Angular, Angular Material, TypeScript, ngx-translate | AWS Amplify Hosting | [https://main.d11tospvoprjej.amplifyapp.com](https://main.d11tospvoprjej.amplifyapp.com) |
+| Fake API (temporal) | `Trazza-webApp` / `main` (carpeta `server`) | json-server | Render (Web Service) | Pendiente |
+| RESTful API (Sprint 3) | `Trazza-WebAPI` / `main` | Spring Boot, Java, Spring Data JPA | AWS EC2 | Pendiente |
 | Base de datos (Sprint 3) | — | MySQL | AWS RDS for MySQL | Pendiente |
 
 #### Landing Page (AWS Amplify Hosting)
