@@ -225,7 +225,7 @@ La solución Trazza se compone de tres productos que se despliegan de forma inde
 | :--- | :--- | :--- | :--- | :--- |
 | Landing Page | `Trazza-landingPage` / `main` | HTML5, CSS3, JavaScript | AWS Amplify Hosting | [https://main.dop9j8vefsnfj.amplifyapp.com](https://main.dop9j8vefsnfj.amplifyapp.com) |
 | Frontend Web Application | `Trazza-webApp` / `main` | Angular, Angular Material, TypeScript, ngx-translate | AWS Amplify Hosting | [https://main.d11tospvoprjej.amplifyapp.com](https://main.d11tospvoprjej.amplifyapp.com) |
-| Fake API (temporal) | `Trazza-webApp` / `main` (carpeta `server`) | json-server | Render (Web Service) | Pendiente |
+| Fake API (temporal) | `Trazza-webApp` / `main` (carpeta `server`) | json-server | AWS EC2 | [https://trazza-api2.duckdns.org/api/v1/users](https://trazza-api2.duckdns.org/api/v1/users) |
 | RESTful API (Sprint 3) | `Trazza-WebAPI` / `main` | Spring Boot, Java, Spring Data JPA | AWS EC2 | Pendiente |
 | Base de datos (Sprint 3) | — | MySQL | AWS RDS for MySQL | Pendiente |
 
@@ -270,11 +270,12 @@ frontend:
 
 5. Guardar y desplegar. Cada merge en `main` genera un nuevo build y despliegue.
 
-#### Fake API (Render)
+#### Fake API (AWS EC2)
 
-1. Crear un **Web Service** en Render conectado al repositorio `Trazza-webApp`.
-2. Configurar Root Directory `server`, Build Command `npm install` y Start Command `npx json-server db.json --routes routes.json --host 0.0.0.0 --port $PORT` (el archivo `routes.json` agrega el prefijo `/api/v1`).
-3. Copiar la URL pública generada y registrarla en la propiedad `platformProviderApiBaseUrl` de `src/environments/environment.ts`.
+1. Aprovisionar una instancia AWS EC2 con Node.js y clonar el repositorio `Trazza-webApp`.
+2. Desde la carpeta `server`, ejecutar `json-server --watch db.json --routes routes.json` (script `start.sh`) en el puerto `3000`. El archivo `routes.json` agrega el prefijo `/api/v1`.
+3. Configurar Nginx como proxy inverso hacia el puerto `3000` y asociar el dominio `trazza-api2.duckdns.org` a la IP pública de la instancia, con certificado HTTPS para que la Web Application desplegada en Amplify pueda consumir el API sin contenido mixto.
+4. Registrar la URL `https://trazza-api2.duckdns.org/api/v1` en la propiedad `platformProviderApiBaseUrl` de `src/environments/environment.ts`.
 
 #### RESTful API y base de datos (planificado para el Sprint 3)
 
