@@ -85,7 +85,7 @@ Al cierre del Sprint 1, el Landing Page quedó publicado en una URL pública. Pr
  
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
  
-El alcance del Sprint 1 se limitó al Landing Page, que es un sitio estático. Por ello, en este Sprint no se implementaron ni documentaron endpoints con OpenAPI. Los Web Services de Trazza se implementarán en ASP.NET Core en un Sprint posterior.
+El alcance del Sprint 1 se limitó al Landing Page, que es un sitio estático. Por ello, en este Sprint no se implementaron ni documentaron endpoints con OpenAPI. Los Web Services de Trazza se implementarán en Spring Boot en un Sprint posterior.
  
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
  
