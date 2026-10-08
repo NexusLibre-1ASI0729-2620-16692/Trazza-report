@@ -91,7 +91,7 @@ El alcance del Sprint 1 se limitó al Landing Page, que es un sitio estático. P
  
 En el Sprint 1 se creó la aplicación en AWS Amplify Hosting y se conectó con la rama `main` del repositorio `Trazza-LandingPage`, siguiendo los pasos descritos en la sección 5.1.4. Al ser un sitio estático, no requiere comando de build. Desde entonces, cada cambio integrado en `main` se publica automáticamente.
  
-**URL del Landing Page:** [https://main.d3opwp5g5g1mc8.amplifyapp.com](https://main.d3opwp5g5g1mc8.amplifyapp.com)
+**URL del Landing Page:** [https://main.dop9j8vefsnfj.amplifyapp.com](https://main.dop9j8vefsnfj.amplifyapp.com)
  
 <div align="center">
   <img src="../assets/images/trazzalandingpagedesplegada.jpeg" alt="Landing Page v1 deployed on AWS Amplify" width="800">
@@ -216,10 +216,10 @@ En esta sección se presentan las evidencias relacionadas con el despliegue del 
 
 | Software Component | Deployment Platform | Repository / Branch | Deployment URL | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| Frontend Web App | AWS Amplify (o Vercel/Netlify) | Trazza-WebApplication / main | https://main.d1h7l9z3r6ucz4.amplifyapp.com | Active |
-| Landing Page v2 | AWS Amplify | Trazza-LandingPage / main | https://main.d3opwp5g5g1mc8.amplifyapp.com | Active |
+| Frontend Web App | AWS Amplify | Trazza-webApp / main | https://main.d11tospvoprjej.amplifyapp.com | Active |
+| Landing Page v2 | AWS Amplify | Trazza-landingPage / main | https://main.dop9j8vefsnfj.amplifyapp.com | Active |
 
-**URL de despliegue (Web App):** https://main.d1h7l9z3r6ucz4.amplifyapp.com
+**URL de despliegue (Web App):** https://main.d11tospvoprjej.amplifyapp.com
 
 <div align="center">
   <img src="../assets/images/chapter5/sprint2-softwaredeploymentconfiguration.jpeg" alt="Sprint 2 - Software Deployment Evidence" width="800">
